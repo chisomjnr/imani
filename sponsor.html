@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="form.css" />
+    <meta charset="utf-8">
+    <title>iMANI | Sponsor Project</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/x-icon" href="">
+
+    <!-- <meta name="Koshila Foundation" content="Spreading hope & joy amongst the children.  ">
+<meta name="description" content="Feel free to connect with us."> -->
+
+      <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+    <!-- 
+      - favicon
+    -->
+    <!-- <link rel="shortcut icon" href="./favicon.svg" type="image/svg+xml"> -->
+ 
+  
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+
+ <!-- 
+    - google font link
+  -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;500;600;700;800&family=Poppins:wght@400;500&display=swap"
+    rel="stylesheet">
+
+  </head>
+
+
+  <body>
+    <div class="wrapper">
+   
+      <header >  
+        <a href="#" id="goBackLink">       <i style="font-size: 25px; color: #0033ff;" class='fas fa-arrow-left'></i></a>
+ 
+        <br>
+        <h1 style="font-size: 35px; font-weight: 600;">Help Us Help You :)</h1>
+        <br>
+        <p style="font-size: 15px; font-weight: 400; ">Feel free to send in donations to help build the technology needed to solve your poblems.</p>
+    <br>
+    </header>
+   
+      <form 
+      action="https://formspree.io/f/xjvnrrzz"
+      method="POST"
+      
+      action="#">
+      <p style="color: rgb(86, 86, 86); font-size: 17px; background: rgba(193, 215, 241, 0.66); padding: 15px; border-radius: 10px;"><STRong>Account No: </STRong> 6040359101
+    <br>
+    <strong>Bank Name: </strong>Fidelity Bank
+    </p>
+      <br>
+       
+   
+     
+
+
+
+   
+
+
+        <br>
+
+
+
+        <p style="color: rgb(116, 115, 115); font-size: 14px; "><strong>Please Note!:</strong> We do not or are in anyway working for Caleb University... </p>
+        <p id="remaining-content" style="display: none; color: rgb(116, 115, 115); font-size: 14px;"> 
+            <br>chisnif universal is a digital art tech based company which among other things is bent on providing solutions for specified problems.</p> <a href="#" id="show-more" style="text-decoration: underline; color: rgb(72, 85, 255); font-size: 13px; text-align: center;">Show More</a> 
+        <a href="#" id="show-less" style="text-decoration: underline; color: rgb(255, 142, 142); font-size: 13px; display: none; text-align: center;">Show Less</a>
+
+    
+        <div class="button-area">
+         
+        </div>
+    
+      </form>
+
+      
+    </div>
+  
+  
+  </body>
+  <script>
+    window.addEventListener('DOMContentLoaded', (event) => {
+        // Extract the section ID from the URL
+        const sectionId = window.location.hash.substring(1);
+        // Scroll to the section with the given ID
+        const section = document.getElementById(sectionId);
+        if (section) {
+            section.scrollIntoView({ behavior: "smooth" });
+        }
+    });
+</script>
+
+
+
+
+  <script>
+    document.getElementById("goBackLink").addEventListener("click", function(event) {
+        event.preventDefault(); // Prevent the default behavior of the link
+    
+        history.back(); // Go back to the previous page
+    });
+    </script>
+  
+  <script>
+    document.getElementById("show-more").addEventListener("click", function(event) {
+        event.preventDefault();
+        var remainingContent = document.getElementById("remaining-content");
+        remainingContent.style.display = "block";
+        var height = remainingContent.scrollHeight;
+        remainingContent.style.height = height + "px";
+        setTimeout(function() {
+            remainingContent.style.height = "auto";
+        }, 500); // Adjust this value to match the transition duration
+        event.target.style.display = "none";
+        document.getElementById("show-less").style.display = "inline";
+    });
+
+    document.getElementById("show-less").addEventListener("click", function(event) {
+    event.preventDefault();
+    var remainingContent = document.getElementById("remaining-content");
+    remainingContent.style.height = remainingContent.scrollHeight + "px";
+    setTimeout(function() {
+        remainingContent.style.height = "0";
+        remainingContent.style.overflow = "hidden";
+    }, 0);
+    setTimeout(function() {
+        remainingContent.style.display = "none";
+    }, 500); // Adjust this value to match the transition duration
+    document.getElementById("show-more").style.display = "inline";
+    event.target.style.display = "none";
+});
+</script>
+
+
+</html>
