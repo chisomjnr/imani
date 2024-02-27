@@ -14,7 +14,7 @@ body{
   display: flex;
 
 
-  background: #f0eeee;
+  background: rgb(255, 239, 219);
   align-items: center;
   justify-content: center;
 }
@@ -56,9 +56,9 @@ body{
 
 
 .wrapper header{
-    color: #1b1b1b;
-  font-size: 22px;
-  font-weight: 600;
+    color: rgb(54, 48, 41);
+  font-size: 20px;
+
   padding: 20px 30px;
  text-align: center;
 }
@@ -97,9 +97,9 @@ form .dbl-fieldd{
   form .fieldd input,
   form .message textarea{
     width: 100%;
-    background: rgb(185, 185, 185);
+    background: rgba(180, 170, 157, 0.548);
     height: 100%;
-    color: #060606;
+    color: #282828;
     outline: none;
     padding: 0 18px 0 48px;
     font-size: 16px;
@@ -108,7 +108,7 @@ form .dbl-fieldd{
   }
   .fieldd input::placeholder,
   .message textarea::placeholder{
-    color: #696969;
+    color: #4c4c4c;
   }
   .fieldd input:focus,
   .message textarea:focus{
@@ -129,7 +129,30 @@ form .dbl-fieldd{
 
 
 
-
+  .wrapper form i{
+    position: absolute;
+    top: 50%;
+    left: 18px;
+    color: #919191;
+    font-size: 17px;
+    pointer-events: none;
+    transform: translateY(-50%);
+  }
+  .field  select {
+    width: 100%;
+    background: rgba(180, 170, 157, 0.548);
+    height: 100%;
+    color: #282828;
+    outline: none;
+    padding: 0 18px 0 48px;
+    font-size: 16px;
+    border-radius: 10px;
+    border: 1px solid transparent;
+  }
+  .field input::placeholder,
+  .message textarea::placeholder{
+    color: #5b5b5b;
+  }
 
 
 
@@ -137,7 +160,7 @@ form .dbl-fieldd{
   position: absolute;
   top: 50%;
   left: 18px;
-  color: #919191;
+  color: #636363;
   font-size: 17px;
   pointer-events: none;
   transform: translateY(-50%);
@@ -145,9 +168,9 @@ form .dbl-fieldd{
 form .field input,
 form .message textarea{
   width: 100%;
-  background: rgb(185, 185, 185);
+  background: rgba(180, 170, 157, 0.548);
   height: 100%;
-  color: #060606;
+  color: #282828;
   outline: none;
   padding: 0 18px 0 48px;
   font-size: 16px;
@@ -156,7 +179,7 @@ form .message textarea{
 }
 .field input::placeholder,
 .message textarea::placeholder{
-  color: #696969;
+  color: #5b5b5b;
 }
 .field input:focus,
 .message textarea:focus{
@@ -194,7 +217,7 @@ form .button-area{
   align-items: center;
 }
 .button-area button{
-  color: #d5d5d5;
+  color: #252525;
   border: none;
   margin: 10px;
   outline: none;
@@ -204,11 +227,13 @@ form .button-area{
   cursor: pointer;
   border-radius: 10px;
   padding: 13px 25px;
-  background: rgb(34, 34, 34);
+  width: 100%;
+  background: rgb(255, 255, 255);
   transition: background 0.3s ease;
 }
 .button-area button:hover{
   background: black;
+  color: #d5d5d5;
 }
 .button-area span{
   font-size: 17px;

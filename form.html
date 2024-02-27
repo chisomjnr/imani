@@ -40,12 +40,12 @@
     <div class="wrapper">
    
       <header >  
-        <a href="#" id="goBackLink">       <i style="font-size: 25px; color: #0033ff;" class='fas fa-arrow-left'></i></a>
+        <a href="#" id="goBackLink">       <i style="font-size: 25px; color: #0033ff; text-shadow: 0 2px 50px blue;" class='fas fa-arrow-left'></i></a>
  
         <br>
-        <h1 style="font-size: 35px; font-weight: 600;"> So Basically, We Need Your Help.</h1>
+        <h1 style="font-size: 27px; font-weight: bold;"> So Basically, We Need Your Help.</h1>
         <br>
-        <p style="font-size: 15px; font-weight: 400; ">We need you to answer our quick questionaire, talk about the issues & challenges you face in <a href="https://www.calebuniversity.edu.ng/" target="_blank">Caleb University </a>and how you'd like us to solve them,
+        <p style="font-size: 13px; font-weight: 400; ">We need you to answer our quick (4) step questionaire, talk about the issues & challenges you face in <a href="https://www.calebuniversity.edu.ng/" target="_blank">Caleb University </a>and how you'd like us to solve them,
             <strong> It's that easy bro!</strong></p>
     <br>
     </header>
@@ -55,7 +55,7 @@
       method="POST"
       
       action="#">
-      <p style="color: rgb(86, 86, 86); font-size: 17px; background: rgba(193, 215, 241, 0.66); padding: 15px; border-radius: 10px;">Let's Start Simple, Yeah?</p>
+      <p style="color: rgb(126, 126, 126); font-size: 17px; background:  rgba(161, 184, 255, 0.429); padding: 15px; border-radius: 10px;">1. Let's Start Simple, Yeah?</p>
       <br>
         <div class="dbl-field">
           <div class="field">
@@ -75,7 +75,14 @@
           </div>
 
           <div class="field">
-            <input type="text" name="User_Gender" placeholder="Your Sex">
+            <select
+            class="input-field"  name="User_Sex" id="lang">
+            <option value="Non Selected">Select Gender</option>
+                <option value="Male">Male</option>
+                <option value="Female">Female</option>
+                <option value="Rather not say">Rather Not Say</option>
+
+                </select> 
             <i class='fas fa-venus-mars'></i>
           </div>
 
@@ -86,11 +93,20 @@
         </div>
 
 <br>
-        <p style="color: rgb(86, 86, 86); font-size: 17px; background: rgba(193, 215, 241, 0.66); padding: 15px; border-radius: 10px; ">Great! Now We'll Need Your Caleb Details</p>
+         <p style="color: rgb(126, 126, 126); font-size: 17px; background:  rgba(161, 184, 255, 0.429); padding: 15px; border-radius: 10px;">2. <strong>Great!</strong> Now We'll Need Your Caleb Details</p>
         <br>
           <div class="dbl-field">
             <div class="field">
-              <input type="number" name="User_Level" placeholder="What Level Are You?">
+                <select
+                class="input-field"  name="User_Level" id="lang">
+                <option value="Non Selected">Current Level</option>
+                    <option value="100">100 Level</option>
+                    <option value="200">200 Level</option>
+                    <option value="300">300 Level</option>
+                    <option value="400">400 Level</option>
+                    <option value="500">500 Level</option>
+                    <option value="Msc">Msc</option>
+                    </select> 
               <i class='fas fa-school'></i>
             </div>
             <div class="field">
@@ -104,10 +120,31 @@
               <i class='fas fa-calendar-alt'></i>
             </div>
             
+            <div class="field">
+                <select
+                class="input-field"  name="User_Hostel" id="lang">
+                <option value="Non Selected">Your Hostel</option>
+                    <option value="Joshua Hall">Joshua Hall</option>
+                    <option value="Joseph Hall">Joseph Hall</option>
+                    <option value="Elisha Hall">Elisha Hall</option>
+                    <option value="Levi Hall">Levi Hall</option>
+                    <option value="Integrity Hall">Integrity Hall</option>
+
+
+                 <option value="Mary Hall">Mary Hall</option>
+                    <option value="Susana Hall">Susana Hall</option>
+                    <option value="Rebecca Hall">Rebecca Hall</option>
+                    <option value="Deborah Hall">Deborah Hall</option>
+                    <option value="Mercy Hall">Mercy Hall</option>
+                    <option value="Dorcas Hall">Dorcas Hall</option>
+                    <option value="Others">Others</option>
+                </select>
+              <i class='fas fa-hotel'></i>
+            </div>
         </div>
 
         <br>
-        <p style="color: rgb(86, 86, 86); font-size: 17px; background: rgba(193, 215, 241, 0.66); padding: 15px; border-radius: 10px; ">Awsome! Now Tell Us What's On Your Mind</p>
+         <p style="color: rgb(126, 126, 126); font-size: 17px; background:  rgba(161, 184, 255, 0.429); padding: 15px; border-radius: 10px;">3. <strong>Awsome!</strong> Now Tell Us What's On Your Mind</p>
         <br>
           <div class="dbl-fieldd">
             <div class="fieldd">
@@ -140,7 +177,7 @@
 
 
         <br>
-        <p style="color: rgb(86, 86, 86); font-size: 17px; background: rgba(193, 215, 241, 0.66); padding: 15px; border-radius: 10px; ">Cool! What else is On Your Mind?</p>
+        <p style="color: rgb(126, 126, 126); font-size: 17px; background:  rgba(161, 184, 255, 0.429); padding: 15px; border-radius: 10px;">4. <strong>Finally!</strong> What else is On Your Mind?</p>
         <br>
           <div class="dbl-fieldd">
             <div class="fieldd">
@@ -167,8 +204,8 @@
 
         <p style="color: rgb(116, 115, 115); font-size: 14px; "><strong>Please Note!:</strong> We do not or are in anyway working for Caleb University... </p>
         <p id="remaining-content" style="display: none; color: rgb(116, 115, 115); font-size: 14px;"> 
-            <br>chisnif universal is a digital art tech based company which among other things is bent on providing solutions for specified problems.</p> <a href="#" id="show-more" style="text-decoration: underline; color: rgb(72, 85, 255); font-size: 13px; text-align: center;">Show More</a> 
-        <a href="#" id="show-less" style="text-decoration: underline; color: rgb(255, 142, 142); font-size: 13px; display: none; text-align: center;">Show Less</a>
+            <br>chisnif universal is a digital art tech based company which among other things is bent on providing solutions for specified problems.</p> <a href="#" id="show-more" style="text-decoration: underline; color: rgb(184, 134, 81); font-size: 13px; text-align: center;">Show More</a> 
+        <a href="#" id="show-less" style="text-decoration: underline; color: rgb(184, 134, 81);  font-size: 13px; display: none; text-align: center;">Show Less</a>
 
         <div class="button-area">
           <button class="btn" type="submit">Submit Your Survey</button>
@@ -183,7 +220,7 @@
         <div class="button-area">
          
         </div>
-        <p style="text-align: center; font-family: poppins; font-size: 12px; margin: 20px;">Designed by chisnif, sponsored by <strong>Caleb University.</strong></p>
+        <p style="text-align: center; font-family: poppins; font-size: 12px; margin: 20px; color: rgb(95, 95, 95);">Designed by chisnif, sponsored by <strong>Caleb University.</strong></p>
       </form>
 
       
