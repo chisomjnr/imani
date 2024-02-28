@@ -16,7 +16,9 @@
   box-sizing: border-box;
 }
 
-
+body{
+  background: bisque;
+}
 
 span{
   background: linear-gradient(45deg, cyan, blue);
@@ -38,7 +40,7 @@ span{
   font-size: 2.5rem;
   font-weight: 700;
   font-family: var(--header-font);
-  color: var(--text-dark);
+  color:rgb(174, 128, 70);
 }
 
 .section__subheader {
@@ -49,8 +51,9 @@ span{
   padding: 0.75rem 2rem;
   font-size: 1rem;
   color: var(--white);
-  background-color: var(--primary-color);
-  border-radius: 5rem;
+  background-color: rgb(0, 0, 0);
+  text-decoration: none;
+  border-radius: 10px;
   cursor: pointer;
   transition: 0.3s;
 }
@@ -225,20 +228,24 @@ margin-right: 30px;
 
 .header__container a {
   display: inline-block;
-  padding: 0 12px;
-  font-size: 3rem;
-  color: var(--white);
-  backdrop-filter: blur(10px);
-  border: 1px solid var(--white);
-  border-radius: 100%;
+  padding: 12px 15px;
+  font-size: 17px;
+  color: rgb(31, 31, 31);
+ background: #eeeeee;
+  border: 2px solid white;
+  border-radius: 10px;
 }
 
 .choose__container {
   position: relative;
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(1, 1fr);
   gap: 2rem;
   align-items: center;
+}
+
+.choose__container h2, .choose__container p{
+  color:rgb(50, 35, 17);
 }
 
 .choose__container .choose__bg {
@@ -332,10 +339,13 @@ margin-right: 30px;
 }
 
 .craft__container {
+  background: bisque;
+
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 2rem;
   align-items: center;
+  border-radius: 10px;
 }
 
 .craft__container .section__subheader {
@@ -354,7 +364,7 @@ margin-right: 30px;
   left: 0;
   width: 100%;
   height: 50%;
-  background-color: #ebf1f1;
+  background-color: #acb8cfdc;
   border-radius: 15px;
   transition: 0.3s;
   z-index: -1;
@@ -728,7 +738,8 @@ margin-right: 30px;
     transform: scaleY(0);
     transform-origin: top;
     transition: 0.5s;
-    background-color: rgba(0, 0, 0, 0.9);
+    background-color: rgb(0, 0, 0);
+    cursor: pointer;
   }
 
   .nav__links .link a {
@@ -749,7 +760,44 @@ margin-right: 30px;
 
   .header__container h1 {
     margin-top: 4rem;
-    font-size: 3.5rem;
+    font-size: 40px;
+  }
+
+  .header__container p {
+  
+    font-size:13px;
+  }
+
+  .choose__grid {
+    margin-top: 2rem;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 2rem 1rem;
+  }
+  
+  .header__container a {
+    display: inline-block;
+    padding: 12px 15px;
+    font-size: 14px;
+    color: rgb(31, 31, 31);
+   background: #eeeeee;
+    border: 2px solid white;
+    border-radius: 10px;
+  }
+
+  .section__header {
+    margin-bottom: 1rem;
+    font-size: 2.0rem;
+    font-weight: 700;
+    font-family: var(--header-font);
+    color: var(--text-dark);
+  }
+
+  .nav__logo a {
+    font-size: 1.4rem;
+    font-weight: 600;
+    font-family: var(--header-font);
+    color: var(--white);
   }
 
   .offer__grid__top,
