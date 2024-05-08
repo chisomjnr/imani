@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>iMANI - Explore iCaleb</title>
+
+  <!-- 
+    - favicon
+  -->
+  <link rel="shortcut icon" href="assets/images/newsletter-banner.png" type="image/svg+xml">
+
+  <!-- 
+    - custom css link
+  -->
+  <link rel="stylesheet" href="./assets/css/style.css">
+
+  <!-- 
+    - google font link
+  -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+  
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <!-- 
+    - preload images
+  -->
+  <link rel="preload" as="image" href="./assets/images/hero-banner.png">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+
+
+
+
+</head>
+<body id="top">
+
+  <!-- 
+    - #HEADER
+  -->
+
+  <header class="header" data-header>
+    <div class="container">
+      <!-- <ion-icon name="app" aria-hidden="true"></ion-icon> -->
+      <a style="   background: linear-gradient(45deg, cyan, blue);
+      -webkit-background-clip: text; /* Clip the text to the background */
+      color: transparent; 
+      " href="#" class="logo">        <i style="font-size:35px; ; "  class='fas fa-lightbulb'></i>
+  
+      iMANI</a>
+
+
+
+
+      
+
+      <nav class="navbar" data-navbar>
+
+        <div class="wrapper">
+          <a href="#" class="logo">    <i style="font-size:35px; ; "  class='fas fa-lightbulb'></i> iMANI.</a>
+
+
+          <button class="nav-close-btn" aria-label="close menu" data-nav-toggler>
+            <ion-icon name="close-outline" aria-hidden="true"></ion-icon>
+          </button>
+        </div>
+
+        <ul  class="navbar-list">
+
+          <li class="navbar-item">
+            <a href="index.html" class="navbar-link" data-nav-link>Home</a>
+          </li>
+
+          <li  class="navbar-item">
+            <a href="icaleb.html" class="navbar-link" data-nav-link>iCaleb</a>
+          </li>
+
+        
+          <li class="navbar-item">
+            <a href="faq.html" class="navbar-link" data-nav-link>How It Works</a>
+          </li>
+
+          <li class="navbar-item">
+            <a href="caiver.html" class="navbar-link" data-nav-link>Caiver AI</a>
+          </li>
+
+          <li class="navbar-item">
+            <a href="getstarted.html" class="navbar-link" data-nav-link>Get Started</a>
+          </li>
+
+        </ul>
+
+      </nav>
+
+      <button class="nav-open-btn" aria-label="open menu" data-nav-toggler>
+        <ion-icon name="menu-outline" aria-hidden="true"></ion-icon>
+      </button>
+
+      <a href="caiver.html" class="btn btn-primary has-before has-after" data-nav-link>Connect With Caiver 
+
+        <i style="font-size:20px; color:rgb(255, 255, 255);  margin-left:8px"  class='fas fa-paper-plane'></i>
+
+      </a>
+
+      <div class="overlay" data-nav-toggler data-overlay></div>
+
+    </div>
+  </header>
+
+
+
+
+
+  <main>
+    <article>
+
+   
+
+
+
+
+      <!-- 
+        - #SERVICE
+      -->
+
+      <section style="background: rgb(255, 239, 195);" class="section service" id="service" aria-label="service">
+        <div class="container">
+<br>
+<br>
+          <p class="section-subtitle has-before text-center">iCaleb</p>
+
+          <h2 class="h2 section-title text-center">Welcome to  i<strong style="   background: linear-gradient(45deg, cyan, blue);
+            -webkit-background-clip: text; /* Clip the text to the background */
+            color: transparent; 
+            text-shadow: 0 2px 70px rgba(0, 0, 255, 0.26);" >Caleb</strong>, <br> Your <span class="has-before">4+ years</span> made easy.</h2>
+            <p style="font-size: 15px; text-align:center; margin: 10px; color: rgb(22, 22, 22)">iCaleb is designed & developed with the <strong>mission of alleviating</strong> stress for both <strong>old and new students</strong> alike.</p>
+            <br>
+ <!-- Search bar with search icon and button -->
+<div class="search-container">
+  <ion-icon name="search-outline" aria-hidden="true"></ion-icon>
+  <input type="text" id="search-bar" placeholder="Search for a feature...">
+  <button class="search-button" onclick="searchFunction()">Search</button>
+</div>
+
+            <br>
+          <ul class="grid-list">
+
+            <li>
+              <div class="service-card" style="--color: 174, 77%, 50%">
+
+               
+
+                <h3 class="h3">
+                  <a href="#" class="card-title">  <i style="font-size:20px;   margin-right:10px; color:black"  class='fas fa-file'></i>e-Clearance </a>
+          
+                </h3>
+
+              </div>
+            </li>
+
+            <li>
+              <div class="service-card" style="--color: 267, 76%, 57%">
+
+
+                <h3 class="h3">
+                  <a href="#" class="card-title"> <i style="font-size:20px;   margin-right:10px; color:black"  class='fas fa-bed'></i>Book Hostel </a>
+                  <!-- <ion-icon style="margin-top: 5px; background: black; color: white; padding: 3px; border-radius: 50px;" name="arrow-forward" aria-hidden="true"></ion-icon> -->
+                </h3>
+
+              </div>
+            </li>
+
+            <li>
+              <div class="service-card" style="--color: 17, 100%, 68%">
+
+            
+
+                <h3 class="h3">
+                  <a href="#" class="card-title"> <i style="font-size:20px;   margin-right:10px; color:black"  class='fas fa-user'></i>Bio Updates</a>
+                  <!-- <ion-icon style="margin-top: 5px; background: black; color: white; padding: 3px; border-radius: 50px;" name="arrow-forward" aria-hidden="true"></ion-icon> -->
+                </h3>
+
+              </div>
+            </li>
+
+            <li>
+              <div class="service-card" style="--color: 343, 98%, 60%">
+
+            
+                <h3 class="h3">
+                  <a href="#" class="card-title"><i style="font-size:20px;   margin-right:10px; color:black"  class='fas fa-utensils'></i>Caf Weekly</a>
+
+                  <!-- <ion-icon style="margin-top: 5px; background: black; color: white; padding: 3px; border-radius: 50px;" name="arrow-forward" aria-hidden="true"></ion-icon> -->
+                </h3>
+
+              </div>
+            </li>
+
+            <li>
+              <div class="service-card" style="--color: 210, 100%, 53%">
+
+
+                <h3 class="h3">
+                  <a href="#" class="card-title"><i style="font-size:20px;   margin-right:10px; color:black"  class='fas fa-envelope'></i>Book Exeat</a> 
+
+                  <!-- <ion-icon style="margin-top: 5px; background: black; color: white; padding: 3px; border-radius: 50px;" name="arrow-forward" aria-hidden="true"></ion-icon> -->
+                </h3>
+
+              </div>
+            </li>
+
+            <li>
+              <div class="service-card" style="--color: 157, 89%, 44%">
+
+             
+
+                <h3 class="h3">
+                  <a href="#" class="card-title"><i style="font-size:20px;   margin-right:10px; color:black"  class='fas fa-book'></i> e-Library </a>
+                  <!-- <ion-icon style="margin-top: 5px; background: black; color: white; padding: 3px; border-radius: 50px;" name="arrow-forward" aria-hidden="true"></ion-icon> -->
+                </h3>
+
+              </div>
+            </li>
+
+            <li>
+              <div class="service-card" style="--color: 52, 98%, 50%">
+
+              
+
+                <h3 class="h3">
+                  <a href="#" class="card-title"><i style="font-size:20px;   margin-right:10px; color:black"  class='fas fa-map'></i>Caleb Maps</a>
+                  <!-- <ion-icon style="margin-top: 5px; background: black; color: white; padding: 3px; border-radius: 50px;" name="arrow-forward" aria-hidden="true"></ion-icon> -->
+                </h3>
+
+              </div>
+            </li>
+
+            <li>
+              <div class="service-card" style="--color: 52, 98%, 50%">
+
+              
+
+                <h3 class="h3">
+                  <a href="#" class="card-title"><i style="font-size:20px;   margin-right:10px; color:black"  class='fas fa-shopping-cart'></i>Caleb Stores</a>
+                  <!-- <ion-icon style="margin-top: 5px; background: black; color: white; padding: 3px; border-radius: 50px;" name="arrow-forward" aria-hidden="true"></ion-icon> -->
+                </h3>
+
+              </div>
+            </li>
+
+            <!-- <li>
+              <a href="#" class="link-card" style="--color: 203, 97%, 75%">
+                <span style="color: blue;" class="span">Cavier AI</span>
+
+                
+              </a>
+            </li> -->
+
+          </ul>
+<br>
+<br>
+
+          <p style="font-size: 14px; text-align:center; margin: 10px;"> Can't find a feature you really need? <a style="text-decoration: underline; color: blue" href="suggest.html">Try suggesting it, We'll build it</a></p>
+
+        </div>
+      </section>
+
+
+
+<!-- Updated JavaScript for search functionality with sorting and "No results found" message -->
+<script>
+  // JavaScript for search functionality
+  const searchInput = document.getElementById('search-bar');
+  const serviceList = document.querySelector('.grid-list');
+  const serviceCards = document.querySelectorAll('.service-card');
+  const noResultsMessage = document.getElementById('no-results');
+
+  // Define keyword-to-service mapping
+  const keywordMap = {
+    'clearance': 'e-Clearance',
+    'clear': 'e-Clearance',
+    'hostel': 'Book Hostel',
+    'accommodation': 'Book Hostel',
+    'bio': 'Bio Updates',
+    'update': 'Bio Updates',
+    'caf': 'Caf Weekly',
+    'restaurant': 'Caf Weekly',
+    'exeat': 'Book Exeat',
+    'library': 'e-Library',
+    'books': 'e-Library',
+    'maps': 'Caleb Maps',
+    'navigation': 'Caleb Maps',
+    'stores': 'Caleb Stores',
+    'shop': 'Caleb Stores'
+  };
+
+  searchInput.addEventListener('input', function(event) {
+    const searchTerm = event.target.value.toLowerCase();
+    let foundResults = false;
+
+    // Check if search term matches any keyword
+    if (keywordMap.hasOwnProperty(searchTerm)) {
+      const matchingService = keywordMap[searchTerm];
+      serviceCards.forEach(card => {
+        const cardTitle = card.querySelector('.card-title').innerText.toLowerCase();
+        if (cardTitle.includes(matchingService.toLowerCase())) {
+          card.style.display = 'block';
+          foundResults = true;
+        } else {
+          card.style.display = 'none';
+        }
+      });
+    } else {
+      // Sort service cards based on their relevance to the search term
+      const sortedServiceCards = Array.from(serviceCards).sort((a, b) => {
+        const titleA = a.querySelector('.card-title').innerText.toLowerCase();
+        const titleB = b.querySelector('.card-title').innerText.toLowerCase();
+        const indexA = titleA.indexOf(searchTerm);
+        const indexB = titleB.indexOf(searchTerm);
+
+        if (indexA === -1 && indexB === -1) return 0;
+        if (indexA === -1) return 1;
+        if (indexB === -1) return -1;
+
+        return indexA - indexB;
+      });
+
+      // Clear existing service list
+      serviceList.innerHTML = '';
+
+      // Add sorted service cards to the service list
+      sortedServiceCards.forEach(card => {
+        const cardTitle = card.querySelector('.card-title').innerText.toLowerCase();
+        if (cardTitle.includes(searchTerm)) {
+          serviceList.appendChild(card.parentElement);
+          card.style.display = 'block';
+          foundResults = true;
+        } else {
+          card.style.display = 'none';
+        }
+      });
+    }
+
+    // Show "No results found" message if no matching services
+    if (!foundResults) {
+      noResultsMessage.style.display = 'block';
+    } else {
+      noResultsMessage.style.display = 'none';
+    }
+  });
+</script>
+
+
+
+
+
+    </article>
+  </main>
+
+
+
+
+  <!-- 
+    - #FOOTER
+  -->
+
+  <footer class="footer">
+    <div class="container">
+
+      
+
+      <div class="footer-bottom">
+
+        <p class="copyright">
+          &copy; 2024 iMANI. All Rights Reserved by <strong>Chisom Echebelem Junior</strong>
+        </p>
+
+        <ul class="social-list">
+          
+          <li>
+            <a href="login.html" class="social-link" style="background: rgb(228, 233, 255)">
+              <i style="font-size:20px; color:rgb(0, 0, 0);  "  class='fas fa-user'></i>
+            </a>
+          </li>
+
+          <li>
+            <a href="caiver.html" class="social-link" style="background: rgb(228, 233, 255)">
+              <i style="font-size:20px; color:rgb(0, 0, 0);  "  class='fas fa-paper-plane'></i>
+
+            </a>
+          </li>
+
+          <li>
+            <a href="icaleb.html" class="social-link" style="background: rgb(228, 233, 255)">
+              <i style="font-size:20px; color:rgb(0, 0, 0);  "  class='fas fa-graduation-cap'></i>
+
+            </a>
+          </li>
+
+          <li>
+            <a href="staff.html" class="social-link" style="background: rgb(228, 233, 255)">
+              <i style="font-size:20px; color:rgb(0, 0, 0);  "  class='fas fa-users'></i>
+            </a>
+          </li>
+
+
+
+        </ul>
+
+      </div>
+
+    </div>
+  </footer>
+
+
+
+
+
+  <!-- 
+    - #BACK TO TOP
+  -->
+
+  <a href="#top" class="back-top-btn has-after active" aria-label="back to top" data-back-top-btn>
+    <ion-icon name="arrow-up" aria-hidden="true"></ion-icon>
+  </a>
+<!-- 
+
+  <a href="caiver.html" class="back-top-btnn has-after active"  > Try Caiver AI
+    <i style="font-size:20px; color:rgb(255, 232, 117);  margin-left:2px"  class='fas fa-paper-plane'></i>
+  </a>
+ -->
+
+
+  <!-- 
+    - custom js link
+  -->
+  <script src="./assets/js/script.js" defer></script>
+
+  <!-- 
+    - ionicon link
+  -->
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+</body>
+
+</html>

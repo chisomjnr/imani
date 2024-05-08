@@ -1,0 +1,124 @@
+.login-signup-form {
+    display: flex;
+    justify-content: center;
+    font-family: poppins;
+    align-items: center;
+    height: 800px; /* Adjust height as needed */
+  }
+  
+  .login-form, .signup-form {
+    margin: 0 20px;
+  }
+  
+  .login-form h2, .signup-form h2 {
+    text-align: center;
+    font-family: poppins;
+    color: #181818;
+  }
+  
+  .login-form form, .signup-form form {
+    width: 600px;
+    margin: 0 auto;
+  }
+
+  @media (max-width: 680px){
+    .login-form form, .signup-form form {
+        width: 320px;
+        margin: 0 auto;
+      }
+  }
+
+  
+  @media (max-width: 385px){
+    .login-form form, .signup-form form {
+        width: 260px;
+        margin: 0 auto;
+      }
+  }
+  
+  .login-form .form-group, .signup-form .form-group {
+    margin-bottom: 20px;
+  }
+  
+  .login-form label, .signup-form label {
+    display: block;
+    margin-bottom: 5px;
+    color: #181818;
+  }
+  
+  .login-form input[type="text"],
+  .login-form input[type="password"],
+  .signup-form input[type="text"],
+  .signup-form input[type="email"],
+  .signup-form input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    background: #ffffff;
+    /* box-shadow: 0 10px 50px #d1ccf1a8; */
+    border: 1px solid #000000ef;
+    border-radius: 5px;
+  }
+  
+  .login-form button,
+  .signup-form button {
+    width: 100%;
+    font-family: poppins;
+    padding: 10px;
+    background-color: #ffcb3d; /* Change as per your brand colors */
+   
+    color: #202020;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .login-form button:hover,
+  .signup-form button:hover {
+    background-color: #141414; /* Change as per your brand colors */
+    color: #e6e6e6;
+  }
+
+  
+  .signup-form {
+    display: none; /* Hide signup form by default */
+  }
+  
+  .signup-form, .login-form {
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .signup-form {
+    transform: translateX(100%);
+  }
+  
+  .signup-form.show, .login-form.show {
+    transform: translateX(0);
+  }
+
+
+
+
+
+
+  .password-input-container {
+    position: relative;
+  }
+  
+  .password-toggle-icon {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+  }
+  
+  .password-toggle-icon i {
+    color: #3a3838;
+  }
+  
+  .password-toggle-icon.active i {
+    color: #333;
+  }
+  
+  
