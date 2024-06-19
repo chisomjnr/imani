@@ -36,6 +36,8 @@
       }
   }
   
+  
+  
   .login-form .form-group, .signup-form .form-group {
     margin-bottom: 20px;
   }
@@ -64,9 +66,9 @@
     width: 100%;
     font-family: poppins;
     padding: 10px;
-    background-color: #ffcb3d; /* Change as per your brand colors */
+    background-color: orange; /* Change as per your brand colors */
    
-    color: #202020;
+    color: #0e0e0e;
     border: none;
     border-radius: 10px;
     cursor: pointer;

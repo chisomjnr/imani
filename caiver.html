@@ -103,8 +103,9 @@
         
 
           <li class="navbar-item">
-            <a href="getstarted.html" class="navbar-link" data-nav-link>Get Started</a>
+            <a href="login.html" class="navbar-link" data-nav-link>Get Started</a>
           </li>
+
 
         </ul>
 
@@ -114,9 +115,9 @@
         <ion-icon name="menu-outline" aria-hidden="true"></ion-icon>
       </button>
 
-      <a href="caiver.html" class="btn btn-primary has-before has-after" data-nav-link>Login/SignUp  
+      <a href="caiver.html" class="btn btn-primary has-before has-after" data-nav-link>Try Caiver Droid  
 
-            <i style="font-size:20px; color:rgb(255, 255, 255);  margin-left:8px"  class='fas fa-user'></i>
+            <i style="font-size:20px; color:rgb(255, 255, 255);  margin-left:8px"  class='fas fa-box-open'></i>
     
         
       </a>
@@ -155,10 +156,10 @@
             Meet <strong style="   background: linear-gradient(45deg, cyan, blue);
             -webkit-background-clip: text; /* Clip the text to the background */
             color: transparent; 
-            text-shadow: 0 2px 70px rgba(0, 0, 255, 0.26);" > Caiver    <i style="font-size:40px;   margin-left:px"  class='fas fa-paper-plane'></i></strong>, caleb's official  <strong style="   background: linear-gradient(-45deg, cyan, blue);
+            text-shadow: 0 2px 70px rgba(0, 0, 255, 0.26);" > Caiver    <i style="font-size:40px;   margin-left:px"  class='fas fa-paper-plane'></i></strong>, caleb's official  <strong style="   background: linear-gradient(-45deg, yellow, orange);
             -webkit-background-clip: text; /* Clip the text to the background */
             color: transparent; 
-            text-shadow: 0 2px 70px rgba(0, 0, 255, 0.26);" > AI</strong> assistant.
+            text-shadow: 0 2px 70px rgba(255, 196, 0, 0.26);" > AI</strong> assistant.
           
           </h2>
      <p style="font-size: 15px; font-family:poppins;text-align:center;">Ask caiver literally anything related within or outside caleb university. <br><p style="text-align: center;  color:rgb(34, 56, 255);">Most Frequently Asked Questions on <strong>Caiver</strong>:</p></p>
@@ -234,7 +235,8 @@
 <button class="chatbot-toggler">
   <p style="color: rgb(24, 24, 24); font-family: Poppins"> Start conversation <i style="font-size:20px; color:rgb(26, 26, 26);  margin-left:8px"  class='fas fa-paper-plane'></i>
 
-  
+<!-- 
+    <span class="material-symbols-outlined">close</span> -->
   </button>
   <div class="chatbot">
     <header>
@@ -488,9 +490,24 @@ document.addEventListener("DOMContentLoaded", function() {
   // Add event listener to the close button inside the chatbox
   closeChatBtn.addEventListener("click", handleCloseChatClick);
 
+  
+// Save chat messages to local storage
+const saveChatMessages = () => {
+  localStorage.setItem("chatMessages", chatbox.innerHTML);
+};
+
+// Add event listener to chat input for saving messages
+const chatInput = document.querySelector(".chat-input textarea");
+chatInput.addEventListener("input", saveChatMessages);
+
+// Load chat messages when the page is loaded
+loadChatMessages();
+
 });
 
 </script>
+
+
 
 
 

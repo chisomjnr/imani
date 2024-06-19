@@ -89,9 +89,11 @@
             <a href="caiver.html" class="navbar-link" data-nav-link>Caiver AI</a>
           </li>
 
+     
           <li class="navbar-item">
-            <a href="getstarted.html" class="navbar-link" data-nav-link>Get Started</a>
+            <a href="login.html" class="navbar-link" data-nav-link>Get Started</a>
           </li>
+
 
         </ul>
 
@@ -128,7 +130,7 @@
         - #SERVICE
       -->
 
-      <section style="background: rgb(255, 239, 195);" class="section service" id="service" aria-label="service">
+      <section style="background: rgb(255, 255, 255);" class="section service" id="service" aria-label="service">
         <div class="container">
 <br>
 <br>
@@ -145,6 +147,10 @@
   <ion-icon name="search-outline" aria-hidden="true"></ion-icon>
   <input type="text" id="search-bar" placeholder="Search for a feature...">
   <button class="search-button" onclick="searchFunction()">Search</button>
+  <!-- Close icon for suggestions -->
+
+  <!-- <div id="suggestions-container" class="suggestions-container"></div>
+  <i class="fas fa-times close-icon" id="close-icon"></i> -->
 </div>
 
             <br>
@@ -156,7 +162,7 @@
                
 
                 <h3 class="h3">
-                  <a href="#" class="card-title">  <i style="font-size:20px;   margin-right:10px; color:black"  class='fas fa-file'></i>e-Clearance </a>
+                  <a href="clearance.html" class="card-title">  <i style="font-size:20px;   margin-right:10px; color:black"  class='fas fa-file'></i>e-Clearance </a>
           
                 </h3>
 
@@ -168,7 +174,7 @@
 
 
                 <h3 class="h3">
-                  <a href="#" class="card-title"> <i style="font-size:20px;   margin-right:10px; color:black"  class='fas fa-bed'></i>Book Hostel </a>
+                  <a href="exeat.html" class="card-title"> <i style="font-size:20px;   margin-right:10px; color:black"  class='fas fa-bed'></i>Book Hostel </a>
                   <!-- <ion-icon style="margin-top: 5px; background: black; color: white; padding: 3px; border-radius: 50px;" name="arrow-forward" aria-hidden="true"></ion-icon> -->
                 </h3>
 
@@ -181,7 +187,7 @@
             
 
                 <h3 class="h3">
-                  <a href="#" class="card-title"> <i style="font-size:20px;   margin-right:10px; color:black"  class='fas fa-user'></i>Bio Updates</a>
+                  <a href="calendar.html" class="card-title"> <i style="font-size:20px;   margin-right:10px; color:black"  class='fas fa-calendar'></i>Calendar</a>
                   <!-- <ion-icon style="margin-top: 5px; background: black; color: white; padding: 3px; border-radius: 50px;" name="arrow-forward" aria-hidden="true"></ion-icon> -->
                 </h3>
 
@@ -220,7 +226,7 @@
              
 
                 <h3 class="h3">
-                  <a href="#" class="card-title"><i style="font-size:20px;   margin-right:10px; color:black"  class='fas fa-book'></i> e-Library </a>
+                  <a href="library.html" class="card-title"><i style="font-size:20px;   margin-right:10px; color:black"  class='fas fa-book'></i> e-Library </a>
                   <!-- <ion-icon style="margin-top: 5px; background: black; color: white; padding: 3px; border-radius: 50px;" name="arrow-forward" aria-hidden="true"></ion-icon> -->
                 </h3>
 
@@ -233,7 +239,7 @@
               
 
                 <h3 class="h3">
-                  <a href="#" class="card-title"><i style="font-size:20px;   margin-right:10px; color:black"  class='fas fa-map'></i>Caleb Maps</a>
+                  <a href="maps.html" class="card-title"><i style="font-size:20px;   margin-right:10px; color:black"  class='fas fa-map'></i>Caleb Maps</a>
                   <!-- <ion-icon style="margin-top: 5px; background: black; color: white; padding: 3px; border-radius: 50px;" name="arrow-forward" aria-hidden="true"></ion-icon> -->
                 </h3>
 
@@ -246,7 +252,7 @@
               
 
                 <h3 class="h3">
-                  <a href="#" class="card-title"><i style="font-size:20px;   margin-right:10px; color:black"  class='fas fa-shopping-cart'></i>Caleb Stores</a>
+                  <a href="stores.html" class="card-title"><i style="font-size:20px;   margin-right:10px; color:black"  class='fas fa-shopping-cart'></i>Caleb Stores</a>
                   <!-- <ion-icon style="margin-top: 5px; background: black; color: white; padding: 3px; border-radius: 50px;" name="arrow-forward" aria-hidden="true"></ion-icon> -->
                 </h3>
 
@@ -353,6 +359,111 @@
       noResultsMessage.style.display = 'none';
     }
   });
+</script>
+
+
+
+<script>
+  // Get the search input element
+
+// Get the suggestions container
+const suggestionsContainer = document.getElementById('suggestions-container');
+
+// List of sample suggestions (replace with actual suggestions)
+const suggestions = ['Bursary', 'ICT Support', 'Hostel', 'Room Bookings', 'Exeat'];
+
+// Function to generate and display suggestions
+function displaySuggestions() {
+  // Clear previous suggestions
+  suggestionsContainer.innerHTML = '';
+  // Get user input
+  const userInput = searchInput.value.toLowerCase();
+  // Filter suggestions based on user input
+  const filteredSuggestions = suggestions.filter(suggestion =>
+    suggestion.toLowerCase().includes(userInput)
+  );
+  // Display filtered suggestions
+  filteredSuggestions.forEach(suggestion => {
+    const suggestionElement = document.createElement('div');
+    suggestionElement.classList.add('suggestion-item');
+    suggestionElement.textContent = suggestion;
+    suggestionElement.addEventListener('click', () => {
+      // Set the selected suggestion as the search input value
+      searchInput.value = suggestion;
+      // Clear suggestions and hide dropdown
+      suggestionsContainer.innerHTML = '';
+      suggestionsContainer.style.display = 'none';
+    });
+    suggestionsContainer.appendChild(suggestionElement);
+  });
+  // Show suggestions dropdown
+  if (filteredSuggestions.length > 0) {
+    suggestionsContainer.style.display = 'block';
+  } else {
+    suggestionsContainer.style.display = 'none';
+  }
+}
+
+// Event listener for search input keyup event
+searchInput.addEventListener('keyup', displaySuggestions);
+
+
+
+
+// Function to generate and display suggestions
+function displaySuggestions() {
+  // Get user input
+  const userInput = searchInput.value.trim().toLowerCase(); // Trim whitespace and convert to lowercase
+  // Clear previous suggestions
+  suggestionsContainer.innerHTML = '';
+  
+  if (userInput !== '') {
+    // Filter suggestions based on user input
+    const filteredSuggestions = suggestions.filter(suggestion =>
+      suggestion.toLowerCase().includes(userInput)
+    );
+    // Display filtered suggestions
+    filteredSuggestions.forEach(suggestion => {
+      const suggestionElement = document.createElement('div');
+      suggestionElement.classList.add('suggestion-item');
+      suggestionElement.textContent = suggestion;
+      suggestionElement.addEventListener('click', () => {
+        // Set the selected suggestion as the search input value
+        searchInput.value = suggestion;
+        // Clear suggestions and hide dropdown
+        suggestionsContainer.innerHTML = '';
+        suggestionsContainer.style.display = 'none';
+      });
+      suggestionsContainer.appendChild(suggestionElement);
+    });
+    // Show suggestions dropdown
+    if (filteredSuggestions.length > 0) {
+      suggestionsContainer.style.display = 'block';
+    } else {
+      suggestionsContainer.style.display = 'none';
+    }
+  } else {
+    // Hide suggestions dropdown if search input is empty
+    suggestionsContainer.style.display = 'none';
+  }
+}
+
+</script>
+
+
+<script>
+
+  // Get the close icon element
+const closeIcon = document.getElementById('close-icon');
+
+// Function to close suggestions
+function closeSuggestions() {
+  suggestionsContainer.style.display = 'none';
+}
+
+// Event listener for close icon click event
+closeIcon.addEventListener('click', closeSuggestions);
+
 </script>
 
 

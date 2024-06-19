@@ -1,0 +1,204 @@
+
+
+/* Mobile view */
+@media (max-width: 468px) {
+    #mo{
+      display: none;
+    }
+  
+  }
+  
+  
+  
+  /* Mobile view */
+  @media (max-width: 468px) {
+  
+    #moi{
+      display: none;
+    }
+  
+  
+    .hero-section .hi{
+  
+    
+      
+      color: white;
+      font-family: poppins;
+      font-size: 35px;
+      margin-bottom: 10px;
+    }
+    
+    .hero-section .pi {
+      color: rgb(201, 201, 201);
+      font-size: 17px;
+      margin-bottom: 20px;
+    }
+  
+  
+  
+  
+  }
+  
+  
+  
+  
+  
+  
+  
+  #moi{
+    display: block;
+  }
+  
+  
+  
+  .homb {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.76), rgba(0, 0, 0, 0.74)), url(../assets/images/hero-icon-bg.svg);
+         
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: cover;   
+  }
+  
+  
+  
+  .hero-section {
+    text-align: center;
+    padding: 20px;
+    background-color: #ffffff00;
+    border-radius: 10px;
+    /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); */
+    max-width: 900px;
+    margin: 20px;
+  }
+  
+  .hero-section h1 {
+    color: bisque;
+    font-family: poppins;
+    font-size: 45px;
+    margin-bottom: 10px;
+  }
+  
+  .hero-section p {
+    color: rgb(201, 201, 201);
+    font-size: 1.2em;
+    margin-bottom: 20px;
+  }
+  
+  .hero-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+  }
+  
+  .hero-buttons .btn {
+    background-color: #000000;
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    font-family: Poppins;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+  }
+  /* 
+  .hero-buttons .btn:hover {
+    background-color: #0056b3;
+  } */
+  
+  
+  /* CSS for search container */
+  .search-container {
+    
+    position: relative;
+  }
+  
+  
+  .homb input{
+    background: rgb(236, 236, 236);
+    margin-bottom: 5px;
+    padding: 17px;
+    border-radius: 30px;
+    font-family: Poppins;
+  
+  }
+  
+  
+  
+  
+  /* CSS for search icon */
+  .search-container ion-icon {
+    position: absolute;
+    font-size: 30px;
+    top: 50%;
+    font-weight: 600;
+    left: 10px;
+    transform: translateY(-50%);
+    color: #797979; /* Adjust color as needed */
+    cursor: pointer;
+  }
+  
+  /* CSS for search input field */
+  .search-container input[type="text"] {
+    padding-left: 50px; /* Adjust as needed to ensure the input field doesn't overlap with the icon */
+    border-radius: 5px;
+  }
+  
+  /* CSS for search button */
+  .search-container .search-button {
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    padding: 8px 20px;
+    background-color: #0056b3; /* Adjust background color as needed */
+    color: #111111; /* Adjust text color as needed */
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: 500;
+    font-family: poppins;
+  }
+  
+  /* CSS for suggestions dropdown */
+  .suggestions-container {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    font-family: poppins;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-top: none;
+    border-radius: 0 0 5px 5px;
+    z-index: 1000;
+    display: none; /* Initially hide the dropdown */
+  }
+  
+  .suggestion-item {
+    padding: 10px;
+    cursor: pointer;
+  }
+  
+  .suggestion-item:hover {
+    background-color: #f0f0f0;
+  }
+  
+  /* CSS for close icon */
+  .close-icon {
+    position: absolute;
+    top: -20px;
+    right: 10px;
+    color: #888; /* Adjust color as needed */
+    cursor: pointer;
+    display: none; /* Initially hide the close icon */
+  }
+  
+  
+  
+  

@@ -17,6 +17,9 @@
   -->
   <link rel="stylesheet" href="./assets/css/style.css">
 
+  
+  <link rel="stylesheet" href="toast.css">
+
   <!-- 
     - google font link
   -->
@@ -37,7 +40,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
 
 
-
+  <link rel="stylesheet" href="https://unicons.iconscout.com/release/v3.0.6/css/line.css">
 
 </head>
 
@@ -127,6 +130,21 @@
   <main>
     <article>
 
+
+      <div class="wrapperr">
+        <div class="toast">
+          <div class="content">
+            <div class="icon"><i class="uil uil-wifi"></i></div>
+            <div class="details">
+              <span>You're online now</span>
+              <p>Hurray! Internet is connected.</p>
+            </div>
+          </div>
+          <div class="close-icon"><i class="fas fa-xmark"></i></div>
+        </div>
+      </div>
+
+
       <!-- 
         - #HERO
       -->
@@ -151,9 +169,10 @@ text-shadow: 0 2px 70px rgba(0, 0, 255, 0.26);" > iMANI</strong>, Your <span cla
             </p>
 
             <div class="wrapper">
-              <a style="background: hsl(47, 100%, 69%);color:rgb(34, 34, 34);" href="getstarted.html" class="btn btn-primary has-before has-after">Get Started 
+              <a style="background: orange;color:rgb(0, 0, 0);" href="login.html" class="btn btn-primary has-before has-after">Let's Get Started 
 
-                <ion-icon style="margin-left: 10px; font-size:20px; color:rgb(22, 22, 22);" name="arrow-forward" aria-hidden="true"></ion-icon>
+          
+                <ion-icon style="margin-left: 10px; font-size:20px; color:rgb(0, 0, 0);" name="arrow-forward" aria-hidden="true"></ion-icon>
               </a>
 
               
@@ -197,7 +216,7 @@ text-shadow: 0 2px 70px rgba(0, 0, 255, 0.26);" > iMANI</strong>, Your <span cla
 
           
               <li>
-                <a href="features.html" class="social-link" style="background: rgb(255, 239, 167);">
+                <a href="login.html" class="social-link" style="background: rgb(255, 238, 213);">
                   <i style="font-size:20px; color:rgb(0, 0, 0);  "  class='fas fa-chevron-right'></i>
 
                  
@@ -235,7 +254,7 @@ text-shadow: 0 2px 70px rgba(0, 0, 255, 0.26);" > iMANI</strong>, Your <span cla
       <div class="footer-bottom">
 
         <p class="copyright">
-          &copy; 2024 iMANI. All Rights Reserved by <strong>Chisom Echebelem Junior</strong>
+          &copy; 2024 iMANI. All Rights Reserved by <strong>Chisom Echebelem Junior.</strong>
         </p>
 
         <ul class="footer-bottom-list">
@@ -279,6 +298,7 @@ text-shadow: 0 2px 70px rgba(0, 0, 255, 0.26);" > iMANI</strong>, Your <span cla
     - custom js link
   -->
   <script src="./assets/js/script.js" defer></script>
+  <script src="toast.js"></script>
 
   <!-- 
     - ionicon link
