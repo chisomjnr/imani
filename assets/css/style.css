@@ -25,7 +25,7 @@
   --raisin-black-1: hsl(240, 8%, 17%);
   --raisin-black-2: hsl(240, 8%, 12%);
   --majorelle-blue: hsl(241, 77%, 63%);
-  --blue-ryb_80: hsla(241, 88%, 60%, 0.8);
+  --blue-ryb_80: #423ff3cc;
   --bittersweet: hsl(0, 100%, 69%);
   --eerie-black: hsl(0, 0%, 13%);
   --ghost-white: rgb(255, 239, 219);
@@ -33,7 +33,7 @@
   --slate-gray: hsl(225, 8%, 48%);
   --cool-gray: hsl(225, 11%, 59%);
   --gainsboro: hsl(217, 16%, 90%);
-  --mustard: hsl(47, 100%, 69%);
+  --mustard: orange;
   --white: hsl(0, 0%, 100%);
   --black: hsl(0, 0%, 0%);
   --onyx: hsl(240, 5%, 26%);
@@ -547,16 +547,16 @@ body {
 
 .service-card {
   height: 100%;
-  background-color: rgb(230, 215, 175);
+  background-color: rgb(255, 255, 255);
   padding-block-end: 40px;
   border-block-end: 3px solid transparent;
  
   transition: .2s ease-in-out;
-  border: 2px solid rgba(0, 0, 0, 0);
+  border: 1px solid rgb(110, 110, 110);
 }
 
 .service input{
-  background: rgb(250, 250, 250);
+  background: rgb(236, 236, 236);
   margin-bottom: 10px;
   padding: 17px;
   border-radius: 10px;
@@ -602,10 +602,53 @@ body {
   font-family: poppins;
 }
 
+/* CSS for suggestions dropdown */
+.suggestions-container {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  font-family: poppins;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-top: none;
+  border-radius: 0 0 5px 5px;
+  z-index: 1000;
+  display: none; /* Initially hide the dropdown */
+}
+
+.suggestion-item {
+  padding: 10px;
+  cursor: pointer;
+}
+
+.suggestion-item:hover {
+  background-color: #f0f0f0;
+}
+
+/* CSS for close icon */
+.close-icon {
+  position: absolute;
+  top: -20px;
+  right: 10px;
+  color: #888; /* Adjust color as needed */
+  cursor: pointer;
+  display: none; /* Initially hide the close icon */
+}
 
 
+.containerr {
+  width: 100%; /* Set a width for the container */
+  height: 100px; /* Set a height for the container */
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
-
+}
+.containerr .img {
+  width: 50px; /* Set a width for the icon */
+  height: 50px; /* Set a height for the icon */
+}
 
 
 

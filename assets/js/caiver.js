@@ -64,15 +64,6 @@ const handleChatbotVisibility = function () {
 
 addEventOnElem(document.body, "transitionend", handleChatbotVisibility);
 
-
-
-
-
-
-
-
-
-
 const chatbotToggler = document.querySelector(".chatbot-toggler");
 const closeBtn = document.querySelector(".close-btn");
 const chatbox = document.querySelector(".chatbox");
@@ -80,17 +71,17 @@ const chatInput = document.querySelector(".chat-input textarea");
 const sendChatBtn = document.querySelector(".chat-input span");
 
 let userMessage = null; // Variable to store user's message
-const API_KEY = "PASTE-YOUR-API-KEY"; // Paste your API key here
+const API_KEY = "sk-proj-KLW6Nt9vaF15zGDzVB4QT3BlbkFJrLoEn32M8bIuGr6cklyJ"; // Paste your API key here
 const inputInitHeight = chatInput.scrollHeight;
 
 const createChatLi = (message, className) => {
-    // Create a chat <li> element with passed message and className
-    const chatLi = document.createElement("li");
-    chatLi.classList.add("chat", `${className}`);
-    let chatContent = className === "outgoing" ? `<p></p>` : ` <i style="font-size:35px; margin-right:8px; color:rgb(250, 250, 250);  "  class='fas fa-paper-plane'></i><p></p>`;
-    chatLi.innerHTML = chatContent;
-    chatLi.querySelector("p").textContent = message;
-    return chatLi; // return chat <li> element
+  // Create a chat <li> element with passed message and className
+  const chatLi = document.createElement("li");
+  chatLi.classList.add("chat", `${className}`);
+  let chatContent = className === "outgoing" ? `<p></p>` : ` <i style="font-size:35px; margin-right:8px; color:rgb(250, 250, 250);  "  class='fas fa-paper-plane'></i><p></p>`;
+  chatLi.innerHTML = chatContent;
+  chatLi.querySelector("p").textContent = message;
+  return chatLi; // return chat <li> element
 }
 
 const generateResponse = (chatElement) => {
@@ -99,131 +90,84 @@ const generateResponse = (chatElement) => {
 
   // Define special inputs and their corresponding responses
   const specialInputs = {
-      "how are you": "I am okay",
-      "New or old caf?": "Why not both",
-      "what's your name": "My name is Caiver",
-      "what is your name":"My name is Caiver",
-      "what's your name?": "My name is Caiver",
-      "what is your name?":"My name is Caiver",
-      "New or old caf?": "Right now i'd suggest trying old caf, the que's a bit fast",
-      "who dey sell weed for school?": "Omo my bro!! dem plenty fr fr"
-      // Add more special inputs and responses as needed
+ 
+    "New or old caf?": "Right now I'd suggest trying old caf, the queue's a bit faster",
+    "who dey sell weed for school?": "Omo my bro!! dem plenty fr fr"
+    // Add more special inputs and responses as needed
   };
 
-    // Check if the user's message matches a special input
-    const specialResponse = specialInputs[userMessage.toLowerCase()];
-    if (specialResponse) {
-        // If a special input is found, set the response after a delay
-        setTimeout(() => {
-            messageElement.textContent = specialResponse;
-            chatbox.scrollTo(0, chatbox.scrollHeight);
-        }, 600); // Adjust the delay time as needed
-        return;
-    }
+  // Check if the user's message matches a special input
+  const specialResponse = specialInputs[userMessage.toLowerCase()];
+  if (specialResponse) {
+    // If a special input is found, set the response after a delay
+    setTimeout(() => {
+      messageElement.textContent = specialResponse;
+      chatbox.scrollTo(0, chatbox.scrollHeight);
+    }, 600); // Adjust the delay time as needed
+    return;
+  }
 
-    // Define the properties and message for the API request
-    const requestOptions = {
-        method: "POST",
-        headers: {
-            "Content-Type": "application/json",
-            "Authorization": `Bearer ${API_KEY}`
-        },
-        body: JSON.stringify({
-            model: "gpt-3.5-turbo",
-            messages: [{role: "user", content: userMessage}],
-        })
-    }
+  // Define the properties and message for the API request
+  const requestOptions = {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+      "Authorization": `Bearer ${API_KEY}`
+    },
+    body: JSON.stringify({
+      model: "gpt-3.5-turbo",
+      messages: [
+        { role: "system", content: "Your name is Caiver. You are an AI assistant of Caleb University. you're created by imani industries, owned by chisom echebeelem junior. you're very nice & fun,  Your main purpose is to serve as a comprehensive AI assistant dedicated to enhancing the university experience for new and current students, faculty, and staff of caleb university. For students, you provide academic support by answering questions about courses, assignments, and exams, offering explanations of complex topics, assisting with study schedules, and providing tutoring and additional resources. You aid in administrative tasks like course registration, informing about academic policies, navigating the university portal, and reminding about deadlines. You also assist with campus navigation, offering directions and information about campus events, and help with library services by aiding in resource searches, providing library information, and assisting with citation styles. Additionally, you support student life by providing information on clubs, housing, dining options, and wellness resources, and offer career services such as resume building, job application assistance, internship information, and interview preparation. For faculty, you support teaching by helping with course planning, material preparation, online learning platforms, and interactive teaching methods. In research, you assist in finding relevant publications, data analysis, and grant opportunities. You also help with administrative tasks like scheduling, providing policy information, and managing student and colleague communication. For staff, you improve administrative efficiency by automating routine tasks, scheduling, and providing reminders. You assist with campus services, including facility management, event planning, and IT support, and help with communication tasks like drafting emails and providing policy updates. In general campus support, you offer emergency assistance with contact information and real-time updates, provide answers to general university inquiries, keep the campus informed with news and announcements, and assist visitors with information and tours. Additionally, you support sustainability initiatives by providing recycling information and assisting with campus-wide sustainability efforts. Overall, your role is to deliver timely, accurate information, automate routine tasks, and offer personalized support to enhance the university experience for everyone. " },
+        { role: "user", content: userMessage }
+      ],
+    })
+  }
 
-    // Send POST request to API, get response and set the response as paragraph text
-    fetch(API_URL, requestOptions).then(res => res.json()).then(data => {
-      messageElement.textContent = data.choices[0].message.content.trim();
-
-
-    // Create a container for the message and icon
-    const messageContainer = document.createElement("div");
-    messageContainer.classList.add("message-container");
-    // Set the text content of the message
-    messageElement.textContent = responseText;
-
-    // Create an icon element
-    const icon = document.createElement("i");
-    icon.classList.add("fas", "fa-copy", "copy-icon");
-    icon.style.color = "white"; // Set icon color to white
-    // Add click event listener to copy the output to clipboard when icon is clicked
-    icon.addEventListener("click", () => {
-        // Copy the text content of the message to clipboard
-        navigator.clipboard.writeText(responseText).then(() => {
-            alert("Output copied to clipboard!");
-        }).catch(err => {
-            console.error("Error copying to clipboard:", err);
-        });
-    });
-
-    // Append the icon to the message container
-    messageContainer.appendChild(messageElement);
-    messageContainer.appendChild(icon);
-
-    // Append the container to the chatbox
-    chatbox.appendChild(messageContainer);
-
-
-    
-    }).catch(() => {
-        messageElement.classList.add("error");
-        messageElement.textContent = "Oops! Something went wrong. Please try again.";
-    }).finally(() => chatbox.scrollTo(0, chatbox.scrollHeight));
+  // Send POST request to API, get response and set the response as paragraph text
+  fetch(API_URL, requestOptions).then(res => res.json()).then(data => {
+    messageElement.textContent = data.choices[0].message.content.trim();
+  }).catch(() => {
+    messageElement.classList.add("error");
+    messageElement.textContent = "Oops! Something went wrong. Please try again.";
+  }).finally(() => chatbox.scrollTo(0, chatbox.scrollHeight));
 }
 
 const handleChat = () => {
-    userMessage = chatInput.value.trim(); // Get user entered message and remove extra whitespace
-    if(!userMessage) return;
+  userMessage = chatInput.value.trim(); // Get user entered message and remove extra whitespace
+  if (!userMessage) return;
 
-    // Clear the input textarea and set its height to default
-    chatInput.value = "";
-    chatInput.style.height = `${inputInitHeight}px`;
+  // Clear the input textarea and set its height to default
+  chatInput.value = "";
+  chatInput.style.height = `${inputInitHeight}px`;
 
-    // Append the user's message to the chatbox
-    chatbox.appendChild(createChatLi(userMessage, "outgoing"));
+  // Append the user's message to the chatbox
+  chatbox.appendChild(createChatLi(userMessage, "outgoing"));
+  chatbox.scrollTo(0, chatbox.scrollHeight);
+
+  setTimeout(() => {
+    // Display "Thinking..." message while waiting for the response
+    const incomingChatLi = createChatLi("Thinking...", "incoming");
+    chatbox.appendChild(incomingChatLi);
     chatbox.scrollTo(0, chatbox.scrollHeight);
-    
-    setTimeout(() => {
-        // Display "Thinking..." message while waiting for the response
-        const incomingChatLi = createChatLi("Thinking...", "incoming");
-        chatbox.appendChild(incomingChatLi);
-        chatbox.scrollTo(0, chatbox.scrollHeight);
-        generateResponse(incomingChatLi);
-    }, 600);
+    generateResponse(incomingChatLi);
+  }, 600);
 }
 
 chatInput.addEventListener("input", () => {
-    // Adjust the height of the input textarea based on its content
-    chatInput.style.height = `${inputInitHeight}px`;
-    chatInput.style.height = `${chatInput.scrollHeight}px`;
+  // Adjust the height of the input textarea based on its content
+  chatInput.style.height = `${inputInitHeight}px`;
+  chatInput.style.height = `${chatInput.scrollHeight}px`;
 });
 
 chatInput.addEventListener("keydown", (e) => {
-    // If Enter key is pressed without Shift key and the window 
-    // width is greater than 800px, handle the chat
-    if(e.key === "Enter" && !e.shiftKey && window.innerWidth > 800) {
-        e.preventDefault();
-        handleChat();
-    }
+  // If Enter key is pressed without Shift key and the window 
+  // width is greater than 800px, handle the chat
+  if (e.key === "Enter" && !e.shiftKey && window.innerWidth > 800) {
+    e.preventDefault();
+    handleChat();
+  }
 });
 
 sendChatBtn.addEventListener("click", handleChat);
 closeBtn.addEventListener("click", () => document.body.classList.remove("show-chatbot"));
 chatbotToggler.addEventListener("click", () => document.body.classList.toggle("show-chatbot"));
-
-
-
-
-
-
-
-
-
-
-
-
-
-
