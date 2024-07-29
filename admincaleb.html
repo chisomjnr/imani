@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="check (1).png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+    
+    <!----======== CSS ======== -->
+    <link rel="stylesheet" href="admincaleb.css">
+     
+    <!----===== Iconscout CSS ===== -->
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+
+    <title>Admin Panel</title>
+
+    <link rel="shortcut icon" href="assets/images/newsletter-banner.png" type="image/svg+xml">
+
+
+
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        table, th, td {
+            border: 1px solid rgb(218, 218, 218);
+        }
+        th, td {
+            padding: 10px;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        .admin-button {
+            padding: 10px 20px;
+            background-color: rgb(17, 17, 17);
+            color: #ececec;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 14px;
+            transition: .2s;
+        }
+        .admin-button:hover {
+            background-color: #494949;
+            color: rgb(253, 253, 253);
+        }
+ 
+        .boxes {
+            display: flex;
+            justify-content: space-between;
+            margin: 20px 0;
+        }
+        .box {
+            flex: 1;
+            padding: 20px;
+            background-color: #f4f4f4;
+            margin-right: 20px;
+            text-align: center;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .box:last-child {
+            margin-right: 0;
+        }
+        .box i {
+            font-size: 2em;
+            margin-bottom: 10px;
+        }
+        .box .text {
+            display: block;
+            font-size: 1.2em;
+            margin-bottom: 10px;
+        }
+        .box .number {
+            font-size: 1.5em;
+            font-weight: bold;
+        }
+      
+
+
+
+
+
+
+
+
+       
+        .popup {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            padding: 20px;
+            background: #fff;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-shadow: 0 2px 50px rgba(0, 0, 0, 0.26);
+            width: 500px;
+            height:350px ;
+            max-width: 80%;
+        }
+        .popup.show {
+            display: block;
+        }
+        .popup h2 {
+            margin-top: 0;
+            font-size: 1.5em;
+        }
+        .popup label {
+            display: block;
+            margin: 10px 0 5px;
+        }
+        .popup input {
+            width: 100%;
+            padding: 8px;
+            box-sizing: border-box;
+            margin-bottom: 10px;
+        }
+        .popup button {
+            padding: 10px 20px;
+            margin-top: 10px;
+            border: none;
+            cursor: pointer;
+            background-color: #007bff;
+            color: #fff;
+            border-radius: 5px;
+        }
+        .popup button .cancel {
+            background-color: #dc3545;
+        }
+
+
+          /* Button container styles */
+          .button-container {
+            text-align: right;
+            margin-bottom: 20px;
+        }
+
+         /* General button styles */
+         button {
+            padding: 10px 15px;
+            margin: 5px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 14px;
+        }
+        .clear-button {
+            background-color: #ff5c5c;
+            color: white;
+        }
+        .edit-button {
+            background-color: orange;
+            color: rgb(15, 15, 15);
+        }
+        .delete-button {
+            background-color: #dc3545;
+            color: white;
+        }
+        .clear-button:hover, .edit-button:hover, .delete-button:hover {
+            opacity: 0.8;
+        }
+    
+    </style>
+
+
+</head>
+<body>
+    <nav>
+        <div class="logo-name">
+            <div class="logo-image">
+                <img src="./assets/images/download.jpeg" 
+                    width="60" alt="">
+            </div>
+
+            <span class="logo_name"><strong>iMANI</strong></span>
+        </div>
+
+        
+                <div class="menu-items">
+                    <ul class="nav-links">
+                        <li><a href="admin.html">
+                            <i class="uil uil-estate"></i>
+                            <span class="link-name">Back to Dahsboard</span>
+                        </a></li>
+                        <li><a href="admincaleb.html">
+                            <i class="uil uil-files-landscapes"></i>
+                            <span class="link-name">iCaleb</span>
+                        </a></li>
+                        <li><a href="#">
+                            <i class="uil uil-chart"></i>
+                            <span class="link-name">Analysis</span>
+                        </a></li>
+<!--                   
+                        <li><a href="#">
+                            <i class="uil uil-comments"></i>
+                            <span class="link-name"></span>
+                        </a></li> -->
+                        <li><a href="#">
+                            <i class="uil uil-thumbs-up"></i>
+                            <span class="link-name">Support</span>
+                        </a></li>
+                    </ul>
+                    
+
+            
+            <ul class="logout-mode">
+                <li>
+                    <a  onclick="logout()" href="#" id="logoutButton">
+                        <i class="uil uil-signout"></i>
+                        <span  class="link-name">Logout</span>
+                    </a>
+                </li>
+                
+
+                <li class="mode">
+                    <a href="#">
+                        <i class="uil uil-moon"></i>
+                    <span class="link-name">Dark Mode</span>
+                </a>
+
+                <div class="mode-toggle">
+                  <span class="switch"></span>
+                </div>
+            </li>
+            </ul>
+        </div>
+    </nav>
+
+
+ 
+    
+    
+    <section class="dashboard">
+        <div class="top">
+            <i class="uil uil-bars sidebar-toggle"></i>
+
+            <div class="search-box">
+                <i class="uil uil-search"></i>
+                <input type="text" placeholder="Search here...">
+            </div>
+            
+            <!--<img src="images/profile.jpg" alt="">-->
+        </div>
+
+        <div class="dash-content">
+            <div class="overview">
+                <div class="title">
+                    <i class="uil uil-user"></i>
+                    <span class="text">iCaleb Data <strong id="lecturer-name"></strong></span>
+                </div>
+                <div class="boxes">
+                    <div class="box box1">
+                        <a href="adminclearance.html">          <i class="uil uil-user"></i>
+                            <span class="text">E-Clearance</span>
+                        </a>
+              
+                    </div>
+                    <div class="box box2">
+                        <a href="adminhostel.html">          <i class="uil uil-user"></i>
+                            <span class="text">Book Hostel</span>
+                         </a>
+              
+                    </div>
+     
+                    <!-- <div class="box box3">
+                        <i class="uil uil-share"></i>
+                        <span class="text">Total Lecturers</span>
+                        <span class="number" id="totalLecturers">0</span>
+                    </div>
+                    <div class="box box4">
+                        <i class="uil uil-thumbs-up"></i>
+                        <span class="text">Total Students</span>
+                        <span class="number" id="totalStudents">0</span>
+                    </div> -->
+                </div>
+
+
+                <div class="boxes">
+             
+                    <div class="box box2">
+                        <a href="adminexeat.html">          <i class="uil uil-user"></i>
+                            <span class="text">Book Exeat</span>
+                          </a>
+              
+                    </div>
+                    <div class="box box2">
+                        <a href="admincalendar.html">          <i class="uil uil-user"></i>
+                            <span class="text"> School Calendar</span>
+                           </a>
+              
+                    </div>
+                    <!-- <div class="box box3">
+                        <i class="uil uil-share"></i>
+                        <span class="text">Total Lecturers</span>
+                        <span class="number" id="totalLecturers">0</span>
+                    </div>
+                    <div class="box box4">
+                        <i class="uil uil-thumbs-up"></i>
+                        <span class="text">Total Students</span>
+                        <span class="number" id="totalStudents">0</span>
+                    </div> -->
+                </div>
+            </div>
+     
+
+          
+        </section>
+    
+        <script src="admin.js"></script>
+
+
+
+        <div id="popup" class="popup"></div>
+
+    <script>
+  
+        
+        
+    </script>
+
+
+
+
+
+
+  
+       
+    
+    
+    
+    <script>
+        function logout() {
+            const existingUsers = JSON.parse(localStorage.getItem('users') || '[]');
+            const loggedInUser = existingUsers.find(user => user.isLoggedIn);
+        
+            if (loggedInUser) {
+                loggedInUser.isLoggedIn = false;
+                localStorage.setItem('users', JSON.stringify(existingUsers));
+            }
+        
+            window.location.href = 'adminlog.html';
+        }
+        
+    </script>
+</body>
+</html>

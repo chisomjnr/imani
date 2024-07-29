@@ -1,0 +1,246 @@
+
+.main{
+    background: #5a58e9;
+
+    border-top-left-radius: 40px;
+    border-top-right-radius: 40px;
+}
+@media (max-width: 780px){
+    .main{
+        background: #5a58e9;
+    
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
+    }
+}
+
+.bodyy {
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: poppins;
+    margin: 0;
+    background-color: #ffffff00;
+    overflow-y: auto; /* Make the calendar scrollable */
+}
+
+.calendar-container {
+    width: 100%;
+    max-width: 1200px;
+   
+
+    background-color: #ffffff00;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: 10px;
+    margin-right: 10px;
+    justify-content: center;
+}
+
+.calendar-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 10px;
+    background-color:  #181818;
+
+    color: #fff;
+}
+
+.calendar-header h2 {
+    margin: 0;
+}
+
+.calendar-header button {
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.calendar {
+    width: 100%;
+    max-height: 400px; /* Adjust as needed */
+    overflow-y: auto;
+}
+
+.days {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    color: rgb(255, 255, 255);
+}
+
+.days li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    border-radius: 8px;
+    background-color: #ffffff00;
+    border: 1px solid #d3d2ff;
+   
+    margin-bottom: 20px;
+    margin-top: 20px;
+    transition: background-color 0.1s, box-shadow 0.3s;
+}
+
+.days li:hover {
+    background-color: rgb(255, 255, 255);
+    color: black;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.days h1 {
+    margin: 0;
+    font-size: 18px;
+    text-align: left;
+    flex: 1;
+}
+
+.days h3 {
+    margin: 0;
+    font-size: 16px;
+    color: #555;
+    flex: 1;
+    text-align: right; /* Ensure event text is on the right */
+}
+
+.pin-btn {
+    font-weight: bold;
+    border: none;
+    color: #030303;
+    font-size: 16px;
+    cursor: pointer;
+    background: orange;
+    border-radius: 7px;
+    padding: 8px 20px;
+    margin-left: 20px;
+}
+
+.pin-btn.pinned {
+  
+    border: none;
+    color: orange;
+    font-size: 16px;
+    cursor: pointer;
+    background: rgb(32, 32, 32);
+    border-radius: 7px;
+    padding: 8px 20px;
+    margin-left: 20px;
+}
+
+.pinned-dates {
+    margin: 20px;
+
+}
+
+.pinned-dates h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    font-family: poppins;
+}
+
+.pinned-container {
+    font-family: poppins;
+    display: flex;
+    flex-direction: column;
+}
+
+
+.pinned-container div {
+    color: #030303;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    border-radius: 8px;
+    background-color: #fff;
+  box-shadow: 0 0 20px #29286d;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+.today {
+    background-color: orange; /* light red color for today */
+    box-shadow: 0 0 10px rgba(255, 187, 0, 0.5); /* red shadow */
+
+}
+
+
+
+.calendar-event.today {
+    background-color: orange; /* light red color for today */
+    box-shadow: 0 0 40px rgba(255, 187, 0, 0.5); /* red shadow */
+    border: transparent;
+}
+
+
+.calendar-event h3 {
+    margin: 0;
+    font-size: 16px;
+    color: #ffffff;
+    flex: 2;
+}
+
+
+/* CSS for search container */
+.search-container {
+    position: relative;
+    width: 50%; /* Adjust width as needed */
+    margin: 0 auto; /* Center align horizontally */
+    margin-top: 20px; /* Add margin from the top */
+  }
+  
+  /* CSS for search icon */
+  .search-container ion-icon {
+    position: absolute;
+    font-size: 24px; /* Adjust icon size as needed */
+    top: 50%;
+    left: 10px;
+   
+    transform: translateY(-50%);
+    color: #cfcfcf; /* Adjust color as needed */
+    cursor: pointer;
+  }
+
+  .search-container ::placeholder{
+    color: #cfcfcf; /* Adjust color as needed */
+  }
+  
+  /* CSS for search input field */
+  .search-container input[type="text"] {
+    padding: 15px 40px; /* Adjust padding as needed */
+    width: 100%; /* Adjust width minus the space for icon and button */
+ box-shadow: 0 0 70px #29286d73;
+    border-radius: 5px;
+    background: #7876ff;
+    font-size: 16px; /* Adjust font size as needed */
+  }
+  
+  /* CSS for search button */
+  .search-container .search-button {
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    padding: 10px 20px; /* Adjust padding as needed */
+    background-color: #ffffff; /* Adjust background color as needed */
+    color: #111111; /* Adjust text color as needed */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: 500;
+    font-family: 'Poppins', sans-serif; /* Adjust font family as needed */
+  }
+  
+

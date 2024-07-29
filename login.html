@@ -37,6 +37,46 @@
 
 
 
+  <style>
+    .containerr {
+        width: 100%; /* Set a width for the container */
+        height: 100px; /* Set a height for the container */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+   
+    }
+    .containerr .img {
+        width: 50px; /* Set a width for the icon */
+        height: 50px; /* Set a height for the icon */
+    }
+
+
+
+    /* styles.css */
+
+.popup {
+  display: none;
+  position: fixed;
+  bottom: -100px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #007bff;
+  color: #fff;
+  padding: 15px 20px;
+  border-radius: 5px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  transition: bottom 0.5s ease-in-out;
+}
+
+.popup.show {
+  display: block;
+  bottom: 20px;
+}
+
+</style>
+
 
 </head>
 <body id="top">
@@ -124,66 +164,46 @@
         <section>
             <div class="login-signup-form">
               <div class="login-form">
-                <!-- <img src="./assets/images/download.jpeg" 
-                width="80" alt=""> -->
+         
+  
+                <div class="containerr">
+                    <img src="./assets/images/download.jpeg" 
+                    width="80" alt="">
+                </div>
                 <h2 class="h1 hero-title">Login to <strong style="font-family:Caveat ;">Caleb </strong> <strong style="   background: linear-gradient(45deg, cyan, blue);
                     -webkit-background-clip: text; /* Clip the text to the background */
                     color: transparent; 
-                    text-shadow: 0 2px 70px rgba(0, 0, 255, 0.26);" > iMANI</strong> <br id="cv"> & Get Started.</h2>
+                    text-shadow: 0 2px 70px rgba(0, 0, 255, 0.26);" > iMANI</strong> <br id="cv"> to use our Features.</h2>
+                    <br>
                   
                     <p style="text-align: center; color: rgb(0, 0, 0); font-size: 14px"><strong>Please note:</strong> Only students of Caleb University <br id="cv"> can get access to this platform.</p>
                     <br>
-                <form id="login-form" action="#" method="POST">
-                  <div class="form-group">
-
-                    <label for="login-username"><i class="fas fa-user"></i> Username or Matric Nunmber:</label>
-                    <input type="text" id="login-username" name="login-username" required>
-                  </div>
-                  <div class="form-group">
-                    <label for="login-password"><i class="fas fa-lock"></i> Password:</label>
-                    <div class="password-input-container">
-                        <input type="password" id="login-password" name="login-password" required>
-                        <span class="password-toggle-icon"><i class="fas fa-eye"></i></span>
+                    <form id="login-form" action="#" method="POST">
+                      <div class="form-group">
+                          <label for="login-identifier"><i class="fas fa-user"></i> Email or Matric Number:</label>
+                          <input type="text" id="login-identifier" name="login-identifier" required>
                       </div>
-                  </div>
-                  <button type="submit">Login</button>
-                </form>
+                      <div class="form-group">
+                          <label for="login-password"><i class="fas fa-lock"></i> Password:</label>
+                          <div class="password-input-container">
+                              <input type="password" id="login-password" name="login-password" required>
+                              <span class="password-toggle-icon"><i class="fas fa-eye"></i></span>
+                          </div>
+                      </div>
+                      <button type="submit">Login</button>
+                      <br>
+                      <p style="text-align: center; font-size: 15px"> Don't have an account? <a style="color: blue; text-decoration: underline" href="signup.html">Signup instead</a></p>
+                  </form>
                 <br>
                 <!-- <p style="text-align: center; font-size:14px;">New to Caleb iMANI? <a style="color: blue; font-size:14px; text-decoration:underline;" href="">Connect with support to join</a></p> -->
               </div>
 
 
 
-
-
-
-
-              <div class="signup-form" id="signup-form">
-                <h2>Sign Up</h2>
-                <form id="signup-form-fields" action="#" method="POST">
-                  <div class="form-group">
-                    <label for="signup-username">Username:</label>
-                    <input type="text" id="signup-username" name="signup-username" required>
-                  </div>
-                  <div class="form-group">
-                    <label for="signup-email">Email:</label>
-                    <input type="email" id="signup-email" name="signup-email" required>
-                  </div>
-                  <div class="form-group">
-             <div class="password-input-container">
-          <input type="password" id="login-password" name="login-password" required>
-          <span class="password-toggle-icon"><i class="fas fa-eye"></i></span>
-        </div>
-                  </div>
-                  <button type="submit">Sign Up</button>
-                  
-                </form>
-              <p>New to Caleb iMANI?</p>  <a href="#" id="login-toggle"> Login</a>
-              </div>
             </div>
-           
-          </section>
-          
+            
+
+            </section>
           
 
 
@@ -193,7 +213,9 @@
   </main>
 
 
-
+  <div id="popup" class="popup">
+    <p id="popup-message"></p>
+</div>
 
 
 
@@ -296,6 +318,70 @@
     });
     </script>
     
+
+
+
+<script>
+  document.getElementById('login-form').addEventListener('submit', function(event) {
+    event.preventDefault(); // Prevent the form from submitting the traditional way
+
+    // Get form data
+    const loginData = {
+        identifier: document.getElementById('login-identifier').value,
+        password: document.getElementById('login-password').value,
+    };
+
+    // Fetch existing users from localStorage
+    const existingUsers = JSON.parse(localStorage.getItem('users') || '[]');
+
+    // Check if the user exists
+    const user = existingUsers.find(user => 
+        (user.email === loginData.identifier || user.matricNumber === loginData.identifier) && 
+        user.password === loginData.password
+    );
+
+    if (user) {
+        // Mark the user as logged in and update localStorage
+        existingUsers.forEach(u => u.isLoggedIn = false); // Mark all users as logged out
+        user.isLoggedIn = true; // Mark the matched user as logged in
+        localStorage.setItem('users', JSON.stringify(existingUsers));
+
+        // Show success popup and redirect after 3 seconds
+        showPopup('Login successful!', true, loginData);
+    } else {
+        // Show error popup
+        showPopup('User does not exist or incorrect password');
+    }
+});
+
+function showPopup(message, redirect = false, loginData = null) {
+    const popup = document.getElementById('popup');
+    const popupMessage = document.getElementById('popup-message');
+    
+    popupMessage.textContent = message;
+    popup.classList.add('show');
+    
+    // Hide popup after 3 seconds and redirect if necessary
+    setTimeout(() => {
+        popup.classList.remove('show');
+        if (redirect) {
+            if (loginData && loginData.identifier === 'junior@gmail.com' && loginData.password === 'i made this') {
+                window.location.href = 'admin.html';
+            } else {
+                window.location.href = 'prompt.html';
+            }
+        }
+    }, 3000);
+}
+
+</script>
+
+
+
+
+
+
+
 
 
 </body>

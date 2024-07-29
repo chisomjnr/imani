@@ -1,0 +1,108 @@
+
+
+.section {
+    display: flex;
+    height: 80vh; /* Reduced height */
+    margin: 5vh 0; /* Added margin at the top and bottom */
+}
+
+.community-link {
+    font-family: poppins;
+    border-radius: 15px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    text-align: left;
+    text-decoration: none;
+    border: 1px solid grey;
+    color: white;
+    font-size: 1.5rem; /* Reduced font size */
+    padding: 20px;
+    margin: 0 10px; /* Added margin to the sides */
+    box-sizing: border-box;
+    transition: .2s;
+}
+
+.farmer {
+    background-color: #ffffff;
+    color: black;
+}
+
+.user {
+    background-color: #ffffff;
+    color: #000000;
+}
+
+.farmer:hover {
+    background-color: orange;
+    color: white;
+}
+
+.user:hover {
+    background-color: #1d21ff;
+    color: #ffffff;
+}
+
+.community-link h1 {
+    margin: 0 0 20px;
+    font-size: 35px; /* Reduced font size */
+}
+
+.community-link p {
+    margin: 0 0 20px;
+    font-size: 16px; /* Reduced font size */
+}
+
+
+.icon {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+/* Tablet view */
+@media (max-width: 768px) {
+    section {
+        flex-direction: column;
+        height: auto;
+        margin: 0;
+    }
+    .community-link {
+        margin: 10px 0; /* Margin between blocks in column layout */
+        font-size: 1.2rem; /* Further reduced font size */
+    }
+    .community-link h1 {
+        font-size: 2rem; /* Further reduced font size */
+    }
+    .community-link p {
+        font-size: 1rem; /* Further reduced font size */
+    }
+    .icon {
+        font-size: 25px;
+    }
+}
+
+/* Mobile view */
+@media (max-width: 480px) {
+    section {
+        flex-direction: column;
+        height: auto;
+        margin: 0;
+    }
+    .community-link {
+        margin: 10px 0; /* Margin between blocks in column layout */
+        padding: 15px; /* Adjusted padding */
+        font-size: 1rem; /* Further reduced font size */
+    }
+    .community-link h1 {
+        font-size: 1.8rem; /* Further reduced font size */
+    }
+    .community-link p {
+        font-size: 1.2rem; /* Further reduced font size */
+    }
+    .icon {
+        font-size: 20px;
+    }
+}
+

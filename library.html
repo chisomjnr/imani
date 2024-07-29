@@ -1,0 +1,611 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>iMANI - E-library</title>
+
+  <!-- 
+    - favicon
+  -->
+  <link rel="shortcut icon" href="assets/images/newsletter-banner.png" type="image/svg+xml">
+
+  <!-- 
+    - custom css link
+  -->
+  <link rel="stylesheet" href="getstarted.css">
+  <link rel="stylesheet" href="union.css">
+  <link rel="stylesheet" href="library.css">
+
+
+  <!-- 
+    - google font link
+  -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+  
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <!-- 
+    - preload images
+  -->
+  <link rel="preload" as="image" href="./assets/images/hero-banner.png">
+
+<link rel="stylesheet" href="login.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+
+
+
+
+</head>
+<body id="top">
+
+  <!-- 
+    - #HEADER
+  -->
+  <header class="header" data-header>
+    <div class="container">
+      <!-- <ion-icon name="app" aria-hidden="true"></ion-icon> -->
+      <a style="   background: linear-gradient(45deg, cyan, blue);
+      -webkit-background-clip: text; /* Clip the text to the background */
+      color: transparent; 
+      " href="#" class="logo">        <i style="font-size:35px; ; "  class='fas fa-lightbulb'></i>
+  
+      iMANI</a>
+
+
+
+
+      
+
+      <nav class="navbar" data-navbar>
+
+        <div class="wrapper">
+          <a href="#" class="logo">    <i style="font-size:35px; ; "  class='fas fa-lightbulb'></i> iMANI.</a>
+
+
+          <button class="nav-close-btn" aria-label="close menu" data-nav-toggler>
+            <ion-icon name="close-outline" aria-hidden="true"></ion-icon>
+          </button>
+        </div>
+
+        <ul  class="navbar-list">
+
+          <li class="navbar-item">
+            <a href="prompt.html" class="navbar-link" data-nav-link>Home</a>
+          </li>
+
+          <li  class="navbar-item">
+            <a href="icaleb2.html" class="navbar-link" data-nav-link>iCaleb</a>
+          </li>
+
+          <li class="navbar-item">
+            <a href="faq2.html" class="navbar-link" data-nav-link>How it works</a>
+          </li>
+
+
+          <li  class="navbar-item">
+            <a href="suggest.html" class="navbar-link" data-nav-link>Suggest a Feature</a>
+          </li>
+
+        
+          <li class="navbar-item">
+            <a href="profile.html" class="navbar-link" data-nav-link>User Profile</a>
+          </li>
+      
+
+
+
+        </ul>
+
+      </nav>
+
+      <button class="nav-open-btn" aria-label="open menu" data-nav-toggler>
+        <ion-icon name="menu-outline" aria-hidden="true"></ion-icon>
+      </button>
+
+      <a href=" " onclick="logout()" class="btn btn-primary has-before has-after" data-nav-link>Logout
+
+        <!-- <i style="font-size:20px; color:rgb(255, 255, 255);  margin-left:8px"  class='fas fa-paper-plane'></i> -->
+
+      </a>
+
+      <div class="overlay" data-nav-toggler data-overlay></div>
+
+    </div>
+  </header>
+
+
+
+
+
+  <main>
+    <article>
+
+
+      <!-- <section class="section hero" id="home" aria-label="hero">
+        <div  class="container">
+
+          <div  class="hero-content">
+<br>
+
+       <div   class="xv">
+
+        <h1 style="background: rgb(255, 233, 191); padding: 15px; border-radius: 10px" class="h1 hero-title">
+<i class="fas fa-book"></i> E-Library.
+                      </h1>
+          
+                      <p style="color: rgb(51, 51, 51);" class="hero-text">
+                   Gain access to 1k+ books including researches, articles, projects and so on, <br> from both within 
+                    and outside the school's educational sector. 
+ </p>
+          
+                      
+       </div>
+          </div>
+
+     
+        </div>
+      </section> -->
+
+      <style>
+        .containerrr {
+            width: 100%; /* Set a width for the container */
+            height: 100px; /* Set a height for the container */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+       
+        }
+        .containerrr .img {
+            width: 50px; /* Set a width for the icon */
+            height: 50px; /* Set a height for the icon */
+        }
+    
+    
+</style>
+
+<br><br>
+<br><br>
+<br><br>
+<br>
+
+<div class="containerr">
+  <div class="containerrr">
+    <img src="./assets/images/download.jpeg" 
+    width="80" alt="">
+</div>
+
+  <header>
+      <h1 class="h1 hero-title">Hello <strong style="color: orange; text-transform: uppercase;" id="user-firstname" class="welcome-strong">User first  name</strong>, Welcome to the E-Library. </h1>
+     
+      <form class="search-box">
+          <input type="search" placeholder="Search for journals, articles, or projects...">
+      </form>
+
+      <!-- <p style="color: rgb(77, 76, 76); text-align: center; font-size: 16px;" class="hero-text">
+        Gain access to 1k+ books including researches, articles, projects and so on, <br> from both within 
+         and outside the school's educational sector. 
+</p> -->
+      <p>Results Count : 0</p>
+  </header>
+  <div class="results"></div>
+</div>
+
+
+
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const form = document.querySelector('.search-box');
+    const input = form.querySelector('input[type="search"]');
+    const resultsContainer = document.querySelector('.results');
+    const resultsCounter = document.querySelector('header p');
+
+    form.addEventListener('submit', function (event) {
+        event.preventDefault();
+        const searchTerm = input.value;
+        if (searchTerm) {
+            searchWikipedia(searchTerm);
+        }
+    });
+
+    function searchWikipedia(searchTerm) {
+        const url = `https://en.wikipedia.org/w/api.php?action=query&list=search&prop=info&inprop=url&utf8=&format=json&origin=*&srlimit=500&srsearch=${encodeURIComponent(searchTerm)}`;
+
+        fetch(url).then(response => response.json()).then(data => {
+            displayResults(data.query.search);
+        }).catch(error => alert('Error : ' + error));
+    }
+
+    function displayResults(results) {
+        resultsContainer.innerHTML = '';
+        resultsCounter.textContent = `Results Count : ${results.length}`;
+        results.forEach(result => {
+            const resultElement = document.createElement('div');
+            resultElement.className = 'result';
+            resultElement.innerHTML = `
+
+            <h3>${result.title}</h3>
+            <p>${result.snippet}</p>
+            <a href="https://en.wikipedia.org/?curid=${result.pageid}" target="_blank">Read More</a>
+            `;
+            resultsContainer.appendChild(resultElement);
+        });
+    }
+});
+</script>
+
+
+
+
+<!-- Student User Card -->
+
+<!-- <div class="student-card">
+
+  <div class="card-header">
+    <img src="./assets/images/download.jpeg"  alt="Student Avatar" class="avatar">
+    <div class="student-info">
+      <h3 class="student-name"><strong id="user-firstname"></strong> <strong id="user-lastname"></strong></h3>
+      <p id="user-department" class="student-program">Computer Science</p>
+    </div>
+  </div>
+  <div class="card-body">
+    <ul class="student-details">
+      <li><strong>Matric Number: </strong>   <strong style="font-weight: 300;" id="user-matric-number"> S123456</strong></li>
+      <li><strong>Email:</strong>    <strong style="font-weight: 300;" id="user-email"> S123456</strong></li>
+      <li><strong>Year:</strong>   <strong style="font-weight: 300;" id="user-year"> S123456</strong></li>
+      <li><strong>Books Borrowed:</strong> 5</li>
+
+    </ul>
+
+    <a class="btnn btnn-primary" href="profile.html">View Profile</a>
+  </div>
+  <h1><i class="fas fa-star"></i> Student E-Library Card</h1>
+</div> -->
+<!-- End Student User Card -->
+
+
+<style>
+  /* Custom CSS for e-library section */
+.section.e-library {
+  padding: 60px 0;
+}
+
+.section-title {
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 30px;
+  color: #333;
+}
+
+.library-content {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.content-category {
+  width: 30%;
+  margin-bottom: 30px;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.category-title {
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+  color: #555;
+}
+
+.content-list {
+  list-style-type: none;
+  padding: 0;
+}
+
+.content-item {
+  margin-bottom: 10px;
+}
+
+.content-item a {
+  color: #007bff;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.content-item a:hover {
+  color: #0056b3;
+}
+
+
+
+
+
+
+/* CSS for Student User Card */
+.student-card {
+  width: 400px;
+  background-color: #fff;
+border: 1px solid rgba(128, 128, 128, 0.568);
+  border-radius: 10px;
+  overflow: hidden;
+  /* box-shadow:0px 15px 40px hsla(209, 30%, 32%, 0.151); */
+   margin: auto; /* Center horizontally */
+  margin-top: 20vh; /* Adjust top margin for vertical centering */
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center items horizontally */
+  justify-content: center; /* Center items vertically */
+  margin-bottom: 30px;
+}
+
+.card-header {
+  background-color: #007bff;
+  color: #fff;
+  padding: 15px;
+  display: flex;
+  align-items: center;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+.avatar {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  margin-right: 15px;
+}
+
+.student-info {
+  flex-grow: 1;
+  font-family: poppins;
+}
+
+.student-name {
+  margin: 0;
+  font-size: 1.5rem;
+}
+
+.student-program {
+  margin: 0;
+  font-size: 1rem;
+}
+
+.card-body {
+  padding: 15px;
+}
+
+.student-details {
+  list-style: none;
+  padding: 0;
+  font-family: poppins;
+
+}
+
+.student-details li {
+  margin-bottom: 10px;
+}
+
+
+
+
+.btnn {
+  display: inline-block;
+  padding: 8px 16px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  text-decoration: none;
+  text-align: center;
+  transition: background-color 0.3s ease;
+}
+
+.btnn:hover {
+  background-color: #0056b3;
+}
+
+.student-card h1{
+  background: orange;
+  color: rgb(255, 255, 255);
+  width: 100%;
+  text-align: center;
+  font-family: poppins;
+  border-top-right-radius: 20px;
+}
+
+
+</style>
+
+<!-- <div class="containerr">
+  <img src="./assets/images/download.jpeg" 
+  width="80" alt="">
+</div> -->
+
+
+<script>
+// script.js
+
+document.addEventListener('DOMContentLoaded', function() {
+    document.querySelectorAll('.password-toggle-icon').forEach(function(icon) {
+        icon.addEventListener('click', function() {
+            var passwordInput = this.previousElementSibling;
+            if (passwordInput.type === 'password') {
+                passwordInput.type = 'text';
+                this.querySelector('i').classList.remove('fa-eye');
+                this.querySelector('i').classList.add('fa-eye-slash');
+            } else {
+                passwordInput.type = 'password';
+                this.querySelector('i').classList.remove('fa-eye-slash');
+                this.querySelector('i').classList.add('fa-eye');
+            }
+        });
+    });
+
+    const existingUsers = JSON.parse(localStorage.getItem('users') || '[]');
+    const loggedInUser = existingUsers.find(user => user.isLoggedIn);
+
+    if (loggedInUser) {
+        // Populate user information on the e-library card
+        document.getElementById('user-firstname').textContent = loggedInUser.firstname;
+        document.getElementById('user-lastname').textContent = loggedInUser.lastname;
+        document.getElementById('user-email').textContent = loggedInUser.email;
+
+        document.getElementById('user-department').textContent = loggedInUser.department;
+        document.getElementById('user-matric-number').textContent = loggedInUser.matricNumber;
+        document.getElementById('user-year').textContent = "4th";
+    } else {
+        // Redirect to login page if no logged-in user found
+        window.location.href = 'login.html';
+    }
+});
+
+document.getElementById('signup-form').addEventListener('submit', function(event) {
+    event.preventDefault(); // Prevent the form from submitting the traditional way
+
+    // Get form data
+    const formData = {
+        firstname: document.getElementById('firstname').value,
+        lastname: document.getElementById('lastname').value,
+        email: document.getElementById('email').value,
+        matricNumber: document.getElementById('matric-number').value,
+        department: document.getElementById('department').value,
+        password: document.getElementById('password').value,
+        confirmPassword: document.getElementById('confirm-password').value,
+    };
+
+    // Validate passwords match
+    if (formData.password !== formData.confirmPassword) {
+        showPopup('Passwords do not match');
+        return;
+    }
+
+    // Check if email already exists
+    const emailExists = existingUsers.some(user => user.email === formData.email);
+    if (emailExists) {
+        showPopup('Email already exists, please try a new one');
+        return;
+    }
+
+    // Check if matric number already exists
+    const matricNumberExists = existingUsers.some(user => user.matricNumber === formData.matricNumber);
+    if (matricNumberExists) {
+        showPopup('Matric number already exists');
+        return;
+    }
+
+    // Store form data
+    existingUsers.push(formData);
+    localStorage.setItem('users', JSON.stringify(existingUsers));
+
+    // Show success popup
+    showPopup('Signup successful!', true);
+
+    // Clear the form
+    this.reset();
+});
+
+
+
+
+
+</script>
+    
+    
+    
+    
+    
+    
+
+
+
+
+    </article>
+  </main>
+
+
+
+
+
+
+
+
+  <!-- 
+    - #BACK TO TOP
+  -->
+
+  <a href="#top" class="back-top-btn has-after active" aria-label="back to top" data-back-top-btn>
+    <ion-icon name="arrow-up" aria-hidden="true"></ion-icon>
+  </a>
+
+
+
+
+
+  <!-- 
+    - custom js link
+  -->
+  <script src="./assets/js/script.js" defer></script>
+
+  <!-- 
+    - ionicon link
+  -->
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+
+
+
+
+  <script>
+    // Get the logged-in user information from local storage
+   const existingUsers = JSON.parse(localStorage.getItem('users') || '[]');
+   const loggedInUser = existingUsers.find(user => user.isLoggedIn); // Assuming you have a way to flag logged in users
+   
+   if (loggedInUser) {
+       // Fetch the user's first name and convert it to uppercase
+       const firstName = loggedInUser.firstname.toUpperCase();
+   
+       // Update the welcome message with the user's first name in uppercase
+       document.getElementById('user-firstname').textContent = firstName;
+   } else {
+       // If no logged-in user is found, redirect to the login page
+       window.location.href = 'login.html';
+   }
+   
+   </script>
+   
+
+
+
+<script>
+    function logout() {
+        const existingUsers = JSON.parse(localStorage.getItem('users') || '[]');
+        const loggedInUser = existingUsers.find(user => user.isLoggedIn);
+    
+        if (loggedInUser) {
+            loggedInUser.isLoggedIn = false;
+            localStorage.setItem('users', JSON.stringify(existingUsers));
+        }
+    
+        window.location.href = 'login.html';
+    }
+    
+</script>
+    
+
+
+
+
+
+
+</body>
+
+</html>

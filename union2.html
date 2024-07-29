@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>iMANI - Caleb Stores</title>
+  <title>iMANI - Caleb Union</title>
 
   <!-- 
     - favicon
@@ -77,8 +77,8 @@
             <a href="prompt.html" class="navbar-link" data-nav-link>Home</a>
           </li>
 
-          <li  class="navbar-item">
-            <a href="icaleb2.html" class="navbar-link" data-nav-link>iCaleb</a>
+          <li class="navbar-item">
+            <a href="faq2.html" class="navbar-link" data-nav-link>How it works</a>
           </li>
 
 
@@ -87,6 +87,9 @@
           </li>
 
         
+          <li class="navbar-item">
+            <a href="profile.html" class="navbar-link" data-nav-link>User Profile</a>
+          </li>
       
 
 
@@ -116,39 +119,103 @@
 
   <main>
     <article>
-
-
       <section class="section hero" id="home" aria-label="hero">
         <div class="container">
-
           <div class="hero-content">
-<br>
-
-       <div   class="xv">
-
-        <h1 style="background: rgb(255, 233, 191); padding: 15px; border-radius: 10px" class="h1 hero-title">
-<i class="fas fa-shopping-cart"></i> Caleb Stores.
-                      </h1>
-          
-                      <p style="color: rgb(51, 51, 51);" class="hero-text">
-             See and monitor what is currenly in stock and what isn't <br> and request or place orders for things you'd like to be sold. 
-<br> </p>
-          
-                      
-       </div>
             <br>
-          
+            <div class="xv">
+              <div class="content-wrapper">
+                <div class="image-container">
+                  <img id="xo" src="./assets/images/woman with laptop.gif" alt="Woman with laptop" class="hero-image">
+                </div>
+                <div class="text-content">
+                  <h1 class="h1 hero-title">
+                    <i class="fas fa-lightbulb"></i>
+                    <strong style="color: orange;" id="user-firstname" class="welcome-strong">User first name</strong>, Connect with 10k+ Students on <strong style="font-family:Caveat ;">Caleb</strong> <strong style="background: linear-gradient(45deg, cyan, blue); -webkit-background-clip: text; color: transparent; text-shadow: 0 2px 70px rgba(0, 0, 255, 0.26);">Union</strong> Just Like Yourself.
+                  </h1>
+                  <p style="color: rgb(51, 51, 51);" class="hero-text">
+                    <strong>Unfortunately</strong> this Feature is currently still in <strong style="color: orange;">development</strong>, we truly apologize <br> for any inconvenience this might have caused.
+                    <br><br>
+                    Meanwhile, you could try our 100% guaranteed to work features:
+                    <div class="wrapper">
+                      <a style="background: hsl(0, 0%, 7%);color:rgb(248, 248, 248);" href="icaleb2.html" class="btn btn-primary has-before has-after; border: 1px solid grey;">iCaleb
+                        <ion-icon style="margin-left: 10px; font-size:20px; color:rgb(252, 252, 252);" name="arrow-forward" aria-hidden="true"></ion-icon>
+                      </a>
+                      <a style="background: hsl(0, 0%, 9%);color:rgb(238, 238, 238);" href="caiver2.html" class="btn btn-primary has-before has-after; border: 1px solid grey;">Caiver AI
+                        <ion-icon style="margin-left: 10px; font-size:20px; color:rgb(248, 248, 248);" name="arrow-forward" aria-hidden="true"></ion-icon>
+                      </a>
+                    </div>
+                  </p>
+                </div>
+                <div class="image-container">
+                  <img id="ox" src="./assets/images/woman with laptop.gif" alt="Woman with laptop" class="hero-image">
+                </div>
+              </div>
+              <br>
+            </div>
           </div>
-
-     
         </div>
       </section>
+      
+      
 
 
 
 
+<style>
+ /* Base styles */
+.content-wrapper {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+}
+
+#xo{
+  display: none;
+}
+
+.image-container {
+  flex: 1;
+  padding-right: 10px;
+}
+
+.text-content {
+  flex: 2;
+}
+
+/* Image size adjustment for desktop view */
+.hero-image {
+  max-width: 900px; /* Reduce the size of the image on desktop */
+}
+
+/* Mobile and Tablet styles */
+@media (max-width: 768px) {
+  .content-wrapper {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  #ox{
+    display: none;
+  }
+
+  #xo{
+    display: block;
+  }
+
+  .image-container {
+    padding-right: 0;
+    padding-bottom: 20px;
+  }
+
+  .hero-image {
+    width: 100%; /* Ensure the image takes full width on mobile and tablet */
+    height: auto;
+  }
+}
 
 
+</style>
 
 
 

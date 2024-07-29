@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>iMANI - Caleb Caf</title>
+
+  <!-- 
+    - favicon
+  -->
+  <link rel="shortcut icon" href="assets/images/newsletter-banner.png" type="image/svg+xml">
+
+  <!-- 
+    - custom css link
+  -->
+  <link rel="stylesheet" href="getstarted.css">
+  <link rel="stylesheet" href="union.css">
+
+  <!-- 
+    - google font link
+  -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+  
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <!-- 
+    - preload images
+  -->
+  <link rel="preload" as="image" href="./assets/images/hero-banner.png">
+
+<link rel="stylesheet" href="login.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+
+
+
+
+</head>
+<body id="top">
+
+  <!-- 
+    - #HEADER
+  -->
+  <header class="header" data-header>
+    <div class="container">
+      <!-- <ion-icon name="app" aria-hidden="true"></ion-icon> -->
+      <a style="   background: linear-gradient(45deg, cyan, blue);
+      -webkit-background-clip: text; /* Clip the text to the background */
+      color: transparent; 
+      " href="#" class="logo">        <i style="font-size:35px; ; "  class='fas fa-lightbulb'></i>
+  
+      iMANI</a>
+
+
+
+
+      
+
+      <nav class="navbar" data-navbar>
+
+        <div class="wrapper">
+          <a href="#" class="logo">    <i style="font-size:35px; ; "  class='fas fa-lightbulb'></i> iMANI.</a>
+
+
+          <button class="nav-close-btn" aria-label="close menu" data-nav-toggler>
+            <ion-icon name="close-outline" aria-hidden="true"></ion-icon>
+          </button>
+        </div>
+
+        <ul  class="navbar-list">
+
+          <li class="navbar-item">
+            <a href="prompt.html" class="navbar-link" data-nav-link>Home</a>
+          </li>
+
+          <li  class="navbar-item">
+            <a href="icaleb2.html" class="navbar-link" data-nav-link>iCaleb</a>
+          </li>
+
+
+          <li class="navbar-item">
+            <a href="faq2.html" class="navbar-link" data-nav-link>How it works</a>
+          </li>
+
+
+          <li  class="navbar-item">
+            <a href="suggest.html" class="navbar-link" data-nav-link>Suggest a Feature</a>
+          </li>
+
+        
+          <li class="navbar-item">
+            <a href="profile.html" class="navbar-link" data-nav-link>User Profile</a>
+          </li>
+      
+
+
+
+        </ul>
+
+      </nav>
+
+      <button class="nav-open-btn" aria-label="open menu" data-nav-toggler>
+        <ion-icon name="menu-outline" aria-hidden="true"></ion-icon>
+      </button>
+
+      <a href=" " onclick="logout()" class="btn btn-primary has-before has-after" data-nav-link>Logout
+
+        <!-- <i style="font-size:20px; color:rgb(255, 255, 255);  margin-left:8px"  class='fas fa-paper-plane'></i> -->
+
+      </a>
+
+      <div class="overlay" data-nav-toggler data-overlay></div>
+
+    </div>
+  </header>
+
+
+
+
+
+  <main>
+    <article>
+
+
+      <section class="section hero" id="home" aria-label="hero">
+        <div class="container">
+
+          <div class="hero-content">
+<br>
+
+       <div   class="xv">
+
+        <h1 style="background: rgb(255, 233, 191); padding: 15px; border-radius: 10px" class="h1 hero-title">
+<i class="fas fa-utensils"></i> Caleb Cafs.
+                      </h1>
+          
+                      <p style="color: rgb(51, 51, 51);" class="hero-text">
+            Check whaat is currently available in caf, monitor population stats <br> and <strong style="color: orange;">place your orders with ease.</strong>
+<br> </p>
+          
+                      
+       </div>
+            <br>
+          
+          </div>
+
+     
+        </div>
+      </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+    
+    
+    
+    
+    
+
+
+
+
+    </article>
+  </main>
+
+
+
+
+
+
+
+
+  <!-- 
+    - #BACK TO TOP
+  -->
+
+  <a href="#top" class="back-top-btn has-after active" aria-label="back to top" data-back-top-btn>
+    <ion-icon name="arrow-up" aria-hidden="true"></ion-icon>
+  </a>
+
+
+
+
+
+  <!-- 
+    - custom js link
+  -->
+  <script src="./assets/js/script.js" defer></script>
+
+  <!-- 
+    - ionicon link
+  -->
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+
+
+
+
+  <script>
+    // Get the logged-in user information from local storage
+   const existingUsers = JSON.parse(localStorage.getItem('users') || '[]');
+   const loggedInUser = existingUsers.find(user => user.isLoggedIn); // Assuming you have a way to flag logged in users
+   
+   if (loggedInUser) {
+       // Fetch the user's first name and convert it to uppercase
+       const firstName = loggedInUser.firstname.toUpperCase();
+   
+       // Update the welcome message with the user's first name in uppercase
+       document.getElementById('user-firstname').textContent = firstName;
+   } else {
+       // If no logged-in user is found, redirect to the login page
+       window.location.href = 'login.html';
+   }
+   
+   </script>
+   
+
+
+
+<script>
+    function logout() {
+        const existingUsers = JSON.parse(localStorage.getItem('users') || '[]');
+        const loggedInUser = existingUsers.find(user => user.isLoggedIn);
+    
+        if (loggedInUser) {
+            loggedInUser.isLoggedIn = false;
+            localStorage.setItem('users', JSON.stringify(existingUsers));
+        }
+    
+        window.location.href = 'login.html';
+    }
+    
+</script>
+    
+
+
+
+
+
+
+</body>
+
+</html>

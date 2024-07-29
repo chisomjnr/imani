@@ -73,26 +73,24 @@
         <ul  class="navbar-list">
 
           <li class="navbar-item">
-            <a href="index.html" class="navbar-link" data-nav-link>Home</a>
+            <a href="prompt.html" class="navbar-link" data-nav-link>Home</a>
           </li>
 
+          <li class="navbar-item">
+            <a href="faq2.html" class="navbar-link" data-nav-link>How it works</a>
+          </li>
+
+
           <li  class="navbar-item">
-            <a href="icaleb.html" class="navbar-link" data-nav-link>iCaleb</a>
+            <a href="suggest.html" class="navbar-link" data-nav-link>Suggest a Feature</a>
           </li>
 
         
           <li class="navbar-item">
-            <a href="faq.html" class="navbar-link" data-nav-link>How It Works</a>
+            <a href="profile.html" class="navbar-link" data-nav-link>User Profile</a>
           </li>
+      
 
-          <li class="navbar-item">
-            <a href="caiver.html" class="navbar-link" data-nav-link>Caiver AI</a>
-          </li>
-
-     
-          <li class="navbar-item">
-            <a href="login.html" class="navbar-link" data-nav-link>Get Started</a>
-          </li>
 
 
         </ul>
@@ -103,9 +101,9 @@
         <ion-icon name="menu-outline" aria-hidden="true"></ion-icon>
       </button>
 
-      <a href="caiver.html" class="btn btn-primary has-before has-after" data-nav-link>Connect With Caiver 
+      <a href=" " onclick="logout()" class="btn btn-primary has-before has-after" data-nav-link>Logout
 
-        <i style="font-size:20px; color:rgb(255, 255, 255);  margin-left:8px"  class='fas fa-paper-plane'></i>
+        <!-- <i style="font-size:20px; color:rgb(255, 255, 255);  margin-left:8px"  class='fas fa-paper-plane'></i> -->
 
       </a>
 
@@ -113,6 +111,9 @@
 
     </div>
   </header>
+
+
+
 
 
 
@@ -134,12 +135,18 @@
         <div class="container">
 <br>
 <br>
+<!-- 
+<div class="containerr">
+  <img src="./assets/images/download.jpeg" 
+  width="80" alt="">
+</div> -->
+
           <p class="section-subtitle has-before text-center">iCaleb</p>
 
           <h2 class="h2 section-title text-center">Welcome to  i<strong style="   background: linear-gradient(45deg, cyan, blue);
             -webkit-background-clip: text; /* Clip the text to the background */
             color: transparent; 
-            text-shadow: 0 2px 70px rgba(0, 0, 255, 0.26);" >Caleb</strong>, <br> Your <span class="has-before">4+ years</span> made easy.</h2>
+            text-shadow: 0 2px 70px rgba(0, 0, 255, 0.26);" >Caleb</strong> <strong style="color: orange;" id="user-firstname" class="welcome-strong">User first name</strong>, Your <span class="has-before">4+ years</span> made easy.</h2>
             <p style="font-size: 15px; text-align:center; margin: 10px; color: rgb(22, 22, 22)">iCaleb is designed & developed with the <strong>mission of alleviating</strong> stress for both <strong>old and new students</strong> alike.</p>
             <br>
  <!-- Search bar with search icon and button -->
@@ -162,7 +169,7 @@
                
 
                 <h3 class="h3">
-                  <a href="login.html" class="card-title">  <i style="font-size:20px;   margin-right:10px; color:black"  class='fas fa-file'></i>e-Clearance </a>
+                  <a href="clearance.html" class="card-title">  <i style="font-size:20px;   margin-right:10px; color:black"  class='fas fa-file'></i>e-Clearance </a>
           
                 </h3>
 
@@ -174,7 +181,7 @@
 
 
                 <h3 class="h3">
-                  <a href="login.html" class="card-title"> <i style="font-size:20px;   margin-right:10px; color:black"  class='fas fa-bed'></i>Book Hostel </a>
+                  <a href="hostel.html" class="card-title"> <i style="font-size:20px;   margin-right:10px; color:black"  class='fas fa-bed'></i>Book Hostel </a>
                   <!-- <ion-icon style="margin-top: 5px; background: black; color: white; padding: 3px; border-radius: 50px;" name="arrow-forward" aria-hidden="true"></ion-icon> -->
                 </h3>
 
@@ -187,32 +194,21 @@
             
 
                 <h3 class="h3">
-                  <a href="login.html" class="card-title"> <i style="font-size:20px;   margin-right:10px; color:black"  class='fas fa-calendar'></i>Calendar</a>
+                  <a href="calendar.html" class="card-title"> <i style="font-size:20px;   margin-right:10px; color:black"  class='fas fa-calendar'></i>Calendar</a>
                   <!-- <ion-icon style="margin-top: 5px; background: black; color: white; padding: 3px; border-radius: 50px;" name="arrow-forward" aria-hidden="true"></ion-icon> -->
                 </h3>
 
               </div>
             </li>
 
-            <li>
-              <div class="service-card" style="--color: 343, 98%, 60%">
-
-            
-                <h3 class="h3">
-                  <a href="login.html" class="card-title"><i style="font-size:20px;   margin-right:10px; color:black"  class='fas fa-utensils'></i>Caleb Cafs</a>
-
-                  <!-- <ion-icon style="margin-top: 5px; background: black; color: white; padding: 3px; border-radius: 50px;" name="arrow-forward" aria-hidden="true"></ion-icon> -->
-                </h3>
-
-              </div>
-            </li>
+     
 
             <li>
               <div class="service-card" style="--color: 210, 100%, 53%">
 
 
                 <h3 class="h3">
-                  <a href="login.html" class="card-title"><i style="font-size:20px;   margin-right:10px; color:black"  class='fas fa-envelope'></i>Book Exeat</a> 
+                  <a href="exeat.html" class="card-title"><i style="font-size:20px;   margin-right:10px; color:black"  class='fas fa-envelope'></i>Book Exeat</a> 
 
                   <!-- <ion-icon style="margin-top: 5px; background: black; color: white; padding: 3px; border-radius: 50px;" name="arrow-forward" aria-hidden="true"></ion-icon> -->
                 </h3>
@@ -226,7 +222,7 @@
              
 
                 <h3 class="h3">
-                  <a href="login.html" class="card-title"><i style="font-size:20px;   margin-right:10px; color:black"  class='fas fa-book'></i> e-Library </a>
+                  <a href="library.html" class="card-title"><i style="font-size:20px;   margin-right:10px; color:black"  class='fas fa-book'></i> e-Library </a>
                   <!-- <ion-icon style="margin-top: 5px; background: black; color: white; padding: 3px; border-radius: 50px;" name="arrow-forward" aria-hidden="true"></ion-icon> -->
                 </h3>
 
@@ -239,25 +235,13 @@
               
 
                 <h3 class="h3">
-                  <a href="login.html" class="card-title"><i style="font-size:20px;   margin-right:10px; color:black"  class='fas fa-map'></i>Caleb Maps</a>
+                  <a href="maps.html" class="card-title"><i style="font-size:20px;   margin-right:10px; color:black"  class='fas fa-map'></i>Caleb Maps</a>
                   <!-- <ion-icon style="margin-top: 5px; background: black; color: white; padding: 3px; border-radius: 50px;" name="arrow-forward" aria-hidden="true"></ion-icon> -->
                 </h3>
 
               </div>
             </li>
 
-            <li>
-              <div class="service-card" style="--color: 52, 98%, 50%">
-
-              
-
-                <h3 class="h3">
-                  <a href="login.html" class="card-title"><i style="font-size:20px;   margin-right:10px; color:black"  class='fas fa-shopping-cart'></i>Caleb Stores</a>
-                  <!-- <ion-icon style="margin-top: 5px; background: black; color: white; padding: 3px; border-radius: 50px;" name="arrow-forward" aria-hidden="true"></ion-icon> -->
-                </h3>
-
-              </div>
-            </li>
 
             <!-- <li>
               <a href="#" class="link-card" style="--color: 203, 97%, 75%">
@@ -476,59 +460,6 @@ closeIcon.addEventListener('click', closeSuggestions);
 
 
 
-  <!-- 
-    - #FOOTER
-  -->
-
-  <footer class="footer">
-    <div class="container">
-
-      
-
-      <div class="footer-bottom">
-
-        <p class="copyright">
-          &copy; 2024 iMANI. All Rights Reserved by <strong>Chisom Echebelem Junior</strong>
-        </p>
-
-        <ul class="social-list">
-          
-          <li>
-            <a href="login.html" class="social-link" style="background: rgb(228, 233, 255)">
-              <i style="font-size:20px; color:rgb(0, 0, 0);  "  class='fas fa-user'></i>
-            </a>
-          </li>
-
-          <li>
-            <a href="caiver.html" class="social-link" style="background: rgb(228, 233, 255)">
-              <i style="font-size:20px; color:rgb(0, 0, 0);  "  class='fas fa-paper-plane'></i>
-
-            </a>
-          </li>
-
-          <li>
-            <a href="icaleb.html" class="social-link" style="background: rgb(228, 233, 255)">
-              <i style="font-size:20px; color:rgb(0, 0, 0);  "  class='fas fa-graduation-cap'></i>
-
-            </a>
-          </li>
-
-          <li>
-            <a href="staff.html" class="social-link" style="background: rgb(228, 233, 255)">
-              <i style="font-size:20px; color:rgb(0, 0, 0);  "  class='fas fa-users'></i>
-            </a>
-          </li>
-
-
-
-        </ul>
-
-      </div>
-
-    </div>
-  </footer>
-
-
 
 
 
@@ -557,6 +488,48 @@ closeIcon.addEventListener('click', closeSuggestions);
   -->
   <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
   <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+
+
+
+
+
+
+  <script>
+    // Get the logged-in user information from local storage
+   const existingUsers = JSON.parse(localStorage.getItem('users') || '[]');
+   const loggedInUser = existingUsers.find(user => user.isLoggedIn); // Assuming you have a way to flag logged in users
+   
+   if (loggedInUser) {
+       // Fetch the user's first name and convert it to uppercase
+       const firstName = loggedInUser.firstname.toUpperCase();
+   
+       // Update the welcome message with the user's first name in uppercase
+       document.getElementById('user-firstname').textContent = firstName;
+   } else {
+       // If no logged-in user is found, redirect to the login page
+       window.location.href = 'login.html';
+   }
+   
+   </script>
+   
+
+
+
+<script>
+    function logout() {
+        const existingUsers = JSON.parse(localStorage.getItem('users') || '[]');
+        const loggedInUser = existingUsers.find(user => user.isLoggedIn);
+    
+        if (loggedInUser) {
+            loggedInUser.isLoggedIn = false;
+            localStorage.setItem('users', JSON.stringify(existingUsers));
+        }
+    
+        window.location.href = 'login.html';
+    }
+    
+</script>
 
 </body>
 

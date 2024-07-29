@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>iMANI - Caleb Maps</title>
+  <title>iMANI - Bluebox AI</title>
 
   <!-- 
     - favicon
@@ -15,9 +15,10 @@
   <!-- 
     - custom css link
   -->
-  <link rel="stylesheet" href="getstarted.css">
-  <link rel="stylesheet" href="union.css">
-  <link rel="stylesheet" href="maps.css">
+  <link rel="stylesheet" href="./assets/css/style.css">
+
+  
+  <link rel="stylesheet" href="bluebox.css">
 
   <!-- 
     - google font link
@@ -34,11 +35,12 @@
   -->
   <link rel="preload" as="image" href="./assets/images/hero-banner.png">
 
-<link rel="stylesheet" href="login.css">
+
+
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
 
 
-
+  <link rel="stylesheet" href="https://unicons.iconscout.com/release/v3.0.6/css/line.css">
 
 </head>
 <body id="top">
@@ -46,7 +48,7 @@
   <!-- 
     - #HEADER
   -->
-  <header class="header" data-header>
+  <header style="background: white; padding-block: 15px;" class="header" data-header>
     <div class="container">
       <!-- <ion-icon name="app" aria-hidden="true"></ion-icon> -->
       <a style="   background: linear-gradient(45deg, cyan, blue);
@@ -77,11 +79,6 @@
           <li class="navbar-item">
             <a href="prompt.html" class="navbar-link" data-nav-link>Home</a>
           </li>
-
-          <li  class="navbar-item">
-            <a href="icaleb2.html" class="navbar-link" data-nav-link>iCaleb</a>
-          </li>
-
           <li class="navbar-item">
             <a href="faq2.html" class="navbar-link" data-nav-link>How it works</a>
           </li>
@@ -95,6 +92,8 @@
           <li class="navbar-item">
             <a href="profile.html" class="navbar-link" data-nav-link>User Profile</a>
           </li>
+        
+      
 
 
 
@@ -125,95 +124,186 @@
     <article>
 
 
-      <section class="section hero" id="home" aria-label="hero">
-        <div  class="container">
-
-          <div class="hero-content">
-<br>
-
-       <div   class="xv">
-
-        <h1 style="background: rgb(255, 233, 191); padding: 15px; border-radius: 10px" class="h1 hero-title">
-<i class="fas fa-map"></i> Caleb Maps.
-                      </h1>
-          
-                      <p style="color: rgb(51, 51, 51);" class="hero-text">
-                Navigate your way around campus with our next level geo-map<br>.<strong style="color: orange;">Just turn on your location.</strong>
-<br> </p>
-          
-                      
-       </div>
-            <br>
-          
+      <!-- <div class="wrapperr">
+        <div class="toast">
+          <div class="content">
+            <div class="icon"><i class="uil uil-wifi"></i></div>
+            <div class="details">
+              <span>You're online now</span>
+              <p>Hurray! Internet is connected.</p>
+            </div>
           </div>
-
-     
+          <div class="close-icon"><i class="fas fa-xmark"></i></div>
         </div>
-      </section>
+      </div> -->
 
 
+      <!-- 
+        - #HERO
+      -->
 
+      
 
+      
+
+      <!-- 
+        - #NEWSLETTER
+      -->
+<br>
+<br>
+<br>
 <style>
-   section {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100%;
+    .section-subtitle.has-before.text-center {
+      
+      
+        animation: bounce 1.5s infinite;
+    }
+
+    @keyframes bounce {
+        0%, 20%, 50%, 80%, 100% {
+            transform: translateY(0);
         }
-        iframe {
-            border: 0;
-            border-radius: 20px;
-            box-shadow: 0 0 70px #24235aa4;;
+        40% {
+            transform: translateY(-30px);
         }
+        60% {
+            transform: translateY(-15px);
+        }
+    }
 </style>
 
+      <section class="section newsletter has-bg-image" aria-label="newsletter"
+        style="background-image: url('./assets/images/newsletter-bg.jpg')">
+        <div class="container">
 
-<section class="main">
-  <section>
-    <div>
-      <br>
-      <h2 style="color: rgb(255, 255, 255);" class="h2 section-title text-center"> Hi There <strong style="color: rgb(0, 0, 0);" id="user-firstname" class="welcome-strong">User first name</strong>, Let's Help Get You Around Campus Easily.</h2>
-      <br>
-      <p style="text-align: center; color: white;"> <strong style="color: rgb(255, 207, 117);">Caleb Maps </strong>is currently still in it's <strong>beta phase.</strong></p>
-      <br>
-      <br>
-      <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d7925.654263302013!2d3.636218!3d6.668332!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x103be14f00000001%3A0x6fdaf3d4a440c169!2sCaleb%20University!5e0!3m2!1sen!2sng!4v1719748309503!5m2!1sen!2sng" width="1100" height="600" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-      <br>
-      <br>
-      <br>
-      <br>
-    </div>
-  </section>
+          <figure class="newsletter-banner">
+           
+          <p class="section-subtitle has-before text-center"></p>
+          </figure>
+
+          <div class="newsletter-content">
+
+            <p style="font-size: 16px; color: rgb(255, 255, 255); "><i class="fas fa-paper-plane"></i> Incorporated with <strong>Caiver AI.</strong></p>
+
+            <h2 class="h2 section-title">Welcome to Bluebox Your Live AI Problem Solver. <br></h2>
+    
+           
+   <!-- Chatbot elements -->
+   <div class="chatbot">
   
-</section>
+    <div class="chatbox">
+        <!-- Chat messages will be appended here -->
+        <ul class="chat-messages"></ul>
+    </div>
+    <div class="chat-input">
+
+        <form action="" class="newsletter-form">
+      
+            <input type="text" name="text" placeholder="Input your problem here..." required class="email-field">
+            <button type="submit" class="btn btn-secondary has-before has-after">
+                <span class="send-chat">Generate Solution</span>
+                <ion-icon name="arrow-forward" aria-hidden="true"></ion-icon>
+            </button>
 
 
-<br>
-<br>
-<br>
+        </form>
+        
+    </div>
+  
+</div>
 
 
-
-
-
-
-
+            
+        
+                
+            </div>
+        </div>
+    </section>
     
-    
-    
-    
-    
-    
-
-
-
 
     </article>
   </main>
 
 
+<style>
+   
+        /* Add some basic styling */
+        .chatbox {
+            max-height: 300px;
+            overflow-y: auto;
+            background: hsl(241, 77%, 63%);
+            color: #ffffff;
+            padding: 10px;
+            border-radius: 10px;
+            border: 2px solid white;
+            margin-bottom: 10px;
+        }
+        .chat-input textarea {
+            width: calc(100% - 40px);
+            height: 50px;
+            resize: none;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            margin-right: 10px;
+        }
+      
+        .chat li {
+            list-style: none;
+            margin-bottom: 10px;
+        }
+        .chat.outgoing {
+            text-align: right;
+     
+        margin-top: 20px;
+            margin-bottom: 30px;
+        }
+        .chat.incoming {
+            text-align: left;
+            background: hsl(241, 100%, 73%);
+            padding: 10px;
+            border-radius: 10px;
+        }
+        .btn {
+            cursor: pointer;
+        }
+    </style>
 
+  <!-- 
+    - #FOOTER
+  -->
+
+  <footer class="footer">
+    <div class="container">
+
+      
+
+      <div class="footer-bottom">
+
+        <p class="copyright">
+          &copy; 2024 iMANI. All Rights Reserved by <strong>Chisom Echebelem Junior.</strong>
+        </p>
+
+        <ul class="footer-bottom-list">
+
+         
+
+          <li>
+            <a href="adminlog.html" class="footer-bottom-link">Admin Log</a>
+          </li>
+
+        
+
+          <li>
+            <a href="https://chisomjnr.github.io/junior.com" target="_blank" class="footer-bottom-link">My Portfolio</a>
+          </li>
+
+        </ul>
+
+      </div>
+
+    </div>
+  </footer>
 
 
 
@@ -235,13 +325,14 @@
     - custom js link
   -->
   <script src="./assets/js/script.js" defer></script>
+  <script src="toast.js"></script>
+  <script src="bb.js"></script>
 
   <!-- 
     - ionicon link
   -->
   <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
   <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
-
 
 
 
@@ -281,7 +372,7 @@
     }
     
 </script>
-    
+
 
 
 

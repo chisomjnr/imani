@@ -1,0 +1,107 @@
+
+.bodyy {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: poppins;
+    margin: 0;
+    background-color: #ffffff00;
+    overflow-y: auto;
+}
+
+.calendar-container {
+    width: 100%;
+    max-width: 1200px;
+    background-color: #ffffff00;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: 10px;
+    margin-right: 10px;
+    justify-content: center;
+}
+
+.calendar-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 10px;
+    background-color: #181818;
+    color: #fff;
+}
+
+.calendar-header h2 {
+    margin: 0;
+}
+
+.calendar-header button {
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.calendar {
+    width: 100%;
+    max-height: 400px;
+    overflow-y: auto;
+}
+
+.days {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    color: black;
+}
+
+.days li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    border-radius: 8px;
+    background-color: #fff;
+   border:  1px solid grey;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    transition: background-color 0.1s, box-shadow 0.3s;
+}
+
+.days li:hover {
+    background-color: orange;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.days h1 {
+    margin: 0;
+    font-size: 18px;
+    text-align: left;
+    flex: 1;
+}
+
+.days h3 {
+    margin: 0;
+    font-size: 16px;
+    color: #555;
+    flex: 1;
+    text-align: right;
+}
+
+.edit-btn {
+    font-weight: bold;
+    border: none;
+    color: #030303;
+    font-size: 16px;
+    cursor: pointer;
+    background: orange;
+    border-radius: 7px;
+    padding: 8px 20px;
+    margin-left: 20px;
+}

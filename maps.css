@@ -1,0 +1,15 @@
+
+.main{
+    background: #5a58e9;
+
+    border-top-left-radius: 40px;
+    border-top-right-radius: 40px;
+}
+@media (max-width: 780px){
+    .main{
+        background: #5a58e9;
+    
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
+    }
+}

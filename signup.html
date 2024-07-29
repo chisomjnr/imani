@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>iMANI - Signup</title>
+
+  <!-- 
+    - favicon
+  -->
+  <link rel="shortcut icon" href="assets/images/newsletter-banner.png" type="image/svg+xml">
+
+  <!-- 
+    - custom css link
+  -->
+  <link rel="stylesheet" href="./assets/css/style.css">
+
+  <!-- 
+    - google font link
+  -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+  
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <!-- 
+    - preload images
+  -->
+  <link rel="preload" as="image" href="./assets/images/hero-banner.png">
+
+<link rel="stylesheet" href="login.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+
+<style>
+    .containerr {
+        width: 100%; /* Set a width for the container */
+        height: 100px; /* Set a height for the container */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+   
+    }
+    .containerr .img {
+        width: 50px; /* Set a width for the icon */
+        height: 50px; /* Set a height for the icon */
+    }
+
+
+.popup {
+    position: fixed;
+    bottom: -100px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #007bff;
+    color: white;
+    padding:15px 20px;
+   font-family: poppins;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    transition: bottom 0.5s, opacity 0.5s;
+}
+
+.popup.show {
+    bottom: 20px;
+    opacity: 1;
+}
+</style>
+
+
+</head>
+<body id="top">
+
+  <!-- 
+    - #HEADER
+  -->
+
+  <header class="header" data-header>
+    <div class="container">
+      <!-- <ion-icon name="app" aria-hidden="true"></ion-icon> -->
+      <a style="   background: linear-gradient(45deg, cyan, blue);
+      -webkit-background-clip: text; /* Clip the text to the background */
+      color: transparent; 
+      " href="#" class="logo">        <i style="font-size:35px; ; "  class='fas fa-lightbulb'></i>
+      iMANI</a>
+
+
+
+
+      
+
+      <nav class="navbar" data-navbar>
+
+        <div class="wrapper">
+          <a href="#" class="logo">    <i style="font-size:35px; ; "  class='fas fa-lightbulb'></i> iMANI.</a>
+
+
+          <button class="nav-close-btn" aria-label="close menu" data-nav-toggler>
+            <ion-icon name="close-outline" aria-hidden="true"></ion-icon>
+          </button>
+        </div>
+
+        <ul  class="navbar-list">
+
+          <li class="navbar-item">
+            <a href="index.html" class="navbar-link" data-nav-link>Home</a>
+          </li>
+
+          <li  class="navbar-item">
+            <a href="icaleb.html" class="navbar-link" data-nav-link>iCaleb</a>
+          </li>
+
+       
+
+          <li class="navbar-item">
+            <a href="faq.html" class="navbar-link" data-nav-link>How It Works</a>
+          </li>
+
+          <li class="navbar-item">
+            <a href="caiver.html" class="navbar-link" data-nav-link>Caiver AI</a>
+          </li>
+
+          <li class="navbar-item">
+            <a href="union.html" class="navbar-link" data-nav-link>Caleb Union</a>
+          </li>
+
+        </ul>
+
+      </nav>
+
+      <button class="nav-open-btn" aria-label="open menu" data-nav-toggler>
+        <ion-icon name="menu-outline" aria-hidden="true"></ion-icon>
+      </button>
+
+      <a href="caiver.html" class="btn btn-primary has-before has-after" data-nav-link>Connect With Caiver 
+
+        <i style="font-size:20px; color:rgb(255, 255, 255);  margin-left:8px"  class='fas fa-paper-plane'></i>
+
+      </a>
+
+      <div class="overlay" data-nav-toggler data-overlay></div>
+
+    </div>
+  </header>
+
+
+
+
+
+  <main>
+    <article>
+
+    
+        <section>
+            <div class="login-signup-form">
+              <div class="login-form">
+                <!-- <img src="./assets/images/download.jpeg" 
+                width="80" alt=""> -->
+                <br>
+                <br>
+                <br><br>
+                <br>
+                <br>
+                <br><br>
+                <br>
+                <br>
+                <br>
+                <br> 
+                <br>
+                <br> 
+                <br>
+                <br> 
+                <br>
+                <br> 
+                <br>
+                <div class="containerr">
+                    <img src="./assets/images/download.jpeg" 
+                    width="80" alt="">
+                </div>
+                <h2 class="h1 hero-title">Signup on <strong style="font-family:Caveat ;">Caleb </strong> <strong style="   background: linear-gradient(45deg, cyan, blue);
+                    -webkit-background-clip: text; /* Clip the text to the background */
+                    color: transparent; 
+                    text-shadow: 0 2px 70px rgba(0, 0, 255, 0.26);" > iMANI</strong> <br id="cv"> & Get Started.</h2>
+                  
+                    <p style="text-align: center; color: rgb(0, 0, 0); font-size: 14px"><strong>Please note:</strong> Only students of Caleb University <br id="cv"> can get access to this platform.</p>
+                    <br>
+                    <form id="signup-form" action="#" method="POST">
+                        <div class="form-group">
+                            <label for="firstname"><i class="fas fa-user"></i> First Name</label>
+                            <input type="text" id="firstname" name="firstname" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="lastname"><i class="fas fa-user"></i> Last Name</label>
+                            <input type="text" id="lastname" name="lastname" required>
+                        </div>
+                        <div  class="form-group">
+                            <label for="email"><i class="fas fa-envelope"></i> Email</label>
+                            <input style=" width: 100%;
+    padding: 10px;
+    background: #ffffff;
+    /* box-shadow: 0 10px 50px #d1ccf1a8; */
+    border: 1px solid #000000ef;
+    border-radius: 5px;" type="email" id="email" name="email" required>
+                        </div> <div class="form-group">
+                            <label for="matric-number"><i class="fas fa-id-badge"></i> Matric Number</label>
+                            <input type="text" id="matric-number" name="matric-number" required>
+                        </div>
+
+                        <div class="form-group">
+                          <label for="department"><i class="fas fa-building"></i> Department</label>
+                          <input type="text" id="department" name="department" required>
+                      </div>
+
+                        <div class="form-group">
+                            <label for="password"><i class="fas fa-lock"></i> Password</label>
+                            <div class="password-input-container">
+                                <input type="password" id="password" name="password" required>
+                                <span class="password-toggle-icon"><i class="fas fa-eye"></i></span>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="confirm-password"><i class="fas fa-lock"></i> Confirm Password</label>
+                            <div class="password-input-container">
+                                <input type="password" id="confirm-password" name="confirm-password" required>
+                                <span class="password-toggle-icon"><i class="fas fa-eye"></i></span>
+                            </div>
+                        </div>
+                        <button type="submit">Signup <i class="fas fa-arrow-right"></i></button>
+                        <br>
+                        <p style="text-align: center; font-size: 15px;">
+                            Already have an account? 
+                            <a style="color: blue; text-decoration: underline" href="login.html">Login</a>
+                        </p>
+                    </form>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <!-- <p style="text-align: center; font-size:14px;">New to Caleb iMANI? <a style="color: blue; font-size:14px; text-decoration:underline;" href="">Connect with support to join</a></p> -->
+              </div>
+
+
+
+
+
+
+
+              <div class="signup-form" id="signup-form">
+                <h2>Sign Up</h2>
+                <form id="signup-form-fields" action="#" method="POST">
+                  <div class="form-group">
+                    <label for="signup-username">Username:</label>
+                    <input type="text" id="signup-username" name="signup-username" required>
+                  </div>
+                  <div class="form-group">
+                    <label for="signup-email">Email:</label>
+                    <input type="email" id="signup-email" name="signup-email" required>
+                  </div>
+                  <div class="form-group">
+             <div class="password-input-container">
+          <input type="password" id="login-password" name="login-password" required>
+          <span class="password-toggle-icon"><i class="fas fa-eye"></i></span>
+        </div>
+                  </div>
+                  <button type="submit">Sign Up</button>
+                  
+                </form>
+              <p>New to Caleb iMANI?</p>  <a href="#" id="login-toggle"> Login</a>
+              </div>
+            </div>
+           
+          </section>
+          
+          
+
+
+          <div id="popup" class="popup">
+            <p id="popup-message"></p>
+        </div>
+
+
+    </article>
+  </main>
+
+
+
+
+
+
+
+
+
+
+  <!-- 
+    - #BACK TO TOP
+  -->
+
+  <a href="#top" class="back-top-btn has-after active" aria-label="back to top" data-back-top-btn>
+    <ion-icon name="arrow-up" aria-hidden="true"></ion-icon>
+  </a>
+
+
+
+
+
+  <!-- 
+    - custom js link
+  -->
+  <script src="./assets/js/script.js" defer></script>
+
+  <!-- 
+    - ionicon link
+  -->
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      document.querySelectorAll('.password-toggle-icon').forEach(function(icon) {
+        icon.addEventListener('click', function() {
+          var passwordInput = this.previousElementSibling;
+          if (passwordInput.type === 'password') {
+            passwordInput.type = 'text';
+            this.querySelector('i').classList.remove('fa-eye');
+            this.querySelector('i').classList.add('fa-eye-slash');
+          } else {
+            passwordInput.type = 'password';
+            this.querySelector('i').classList.remove('fa-eye-slash');
+            this.querySelector('i').classList.add('fa-eye');
+          }
+        });
+      });
+    });
+    </script>
+    
+
+
+<script>
+// script.js
+document.getElementById('signup-form').addEventListener('submit', function(event) {
+  event.preventDefault(); // Prevent the form from submitting the traditional way
+
+  // Get form data
+  const formData = {
+      firstname: document.getElementById('firstname').value,
+      lastname: document.getElementById('lastname').value,
+      email: document.getElementById('email').value,
+      matricNumber: document.getElementById('matric-number').value,
+      department: document.getElementById('department').value,
+      password: document.getElementById('password').value,
+      confirmPassword: document.getElementById('confirm-password').value,
+  };
+
+  // Validate passwords match
+  if (formData.password !== formData.confirmPassword) {
+      showPopup('Passwords do not match');
+      return;
+  }
+
+  // Check if email already exists
+  const existingUsers = JSON.parse(localStorage.getItem('users') || '[]');
+  const emailExists = existingUsers.some(user => user.email === formData.email);
+  if (emailExists) {
+      showPopup('Email already exists, please try a new one');
+      return;
+  }
+
+  // Check if matric number already exists
+  const matricNumberExists = existingUsers.some(user => user.matricNumber === formData.matricNumber);
+  if (matricNumberExists) {
+      showPopup('Matric number already exists');
+      return;
+  }
+
+  // Store form data
+  existingUsers.push(formData);
+  localStorage.setItem('users', JSON.stringify(existingUsers));
+
+  // Show success popup
+  showPopup('Signup successful!', true);
+
+  // Clear the form
+  this.reset();
+});
+
+function showPopup(message, redirect = false) {
+  const popup = document.getElementById('popup');
+  const popupMessage = document.getElementById('popup-message');
+  
+  popupMessage.textContent = message;
+  popup.classList.add('show');
+  
+  // Hide popup after 3 seconds and redirect if necessary
+  setTimeout(() => {
+      popup.classList.remove('show');
+      if (redirect) {
+          window.location.href = 'login.html';
+      } 
+  }, 3000);
+}
+
+</script>
+
+
+
+
+
+</body>
+
+</html>

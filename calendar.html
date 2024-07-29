@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>iMANI - Calendar</title>
+
+  <!-- 
+    - favicon
+  -->
+  <link rel="shortcut icon" href="assets/images/newsletter-banner.png" type="image/svg+xml">
+
+  <!-- 
+    - custom css link
+  -->
+  <link rel="stylesheet" href="getstarted.css">
+  <link rel="stylesheet" href="union.css">
+  <link rel="stylesheet" href="calendar.css">
+  <!-- 
+    - google font link
+  -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+  
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <!-- 
+    - preload images
+  -->
+  <link rel="preload" as="image" href="./assets/images/hero-banner.png">
+
+<link rel="stylesheet" href="login.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+
+
+
+
+</head>
+<body id="top">
+
+  <!-- 
+    - #HEADER
+  -->
+  <header class="header" data-header>
+    <div class="container">
+      <!-- <ion-icon name="app" aria-hidden="true"></ion-icon> -->
+      <a style="   background: linear-gradient(45deg, cyan, blue);
+      -webkit-background-clip: text; /* Clip the text to the background */
+      color: transparent; 
+      " href="#" class="logo">        <i style="font-size:35px; ; "  class='fas fa-lightbulb'></i>
+  
+      iMANI</a>
+
+
+
+
+      
+
+      <nav class="navbar" data-navbar>
+
+        <div class="wrapper">
+          <a href="#" class="logo">    <i style="font-size:35px; ; "  class='fas fa-lightbulb'></i> iMANI.</a>
+
+
+          <button class="nav-close-btn" aria-label="close menu" data-nav-toggler>
+            <ion-icon name="close-outline" aria-hidden="true"></ion-icon>
+          </button>
+        </div>
+
+        <ul  class="navbar-list">
+
+          <li class="navbar-item">
+            <a href="prompt.html" class="navbar-link" data-nav-link>Home</a>
+          </li>
+
+          <li  class="navbar-item">
+            <a href="icaleb2.html" class="navbar-link" data-nav-link>iCaleb</a>
+          </li>
+
+          <li class="navbar-item">
+            <a href="faq.html" class="navbar-link" data-nav-link>How it works</a>
+          </li>
+
+
+          <li  class="navbar-item">
+            <a href="suggest.html" class="navbar-link" data-nav-link>Suggest a Feature</a>
+          </li>
+
+        
+          <li class="navbar-item">
+            <a href="profile.html" class="navbar-link" data-nav-link>User Profile</a>
+          </li>
+
+
+        </ul>
+
+      </nav>
+
+      <button class="nav-open-btn" aria-label="open menu" data-nav-toggler>
+        <ion-icon name="menu-outline" aria-hidden="true"></ion-icon>
+      </button>
+
+      <a href=" " onclick="logout()" class="btn btn-primary has-before has-after" data-nav-link>Logout
+
+        <!-- <i style="font-size:20px; color:rgb(255, 255, 255);  margin-left:8px"  class='fas fa-paper-plane'></i> -->
+
+      </a>
+
+      <div class="overlay" data-nav-toggler data-overlay></div>
+
+    </div>
+  </header>
+
+
+
+
+
+  <main>
+    <article>
+
+
+      <section class="section hero" id="home" aria-label="hero">
+        <div class="container">
+
+          <div class="hero-content">
+<br>
+
+       <div   class="xv">
+
+        <h1 style="background: rgb(255, 233, 191); padding: 15px; border-radius: 10px" class="h1 hero-title">
+<i class="fas fa-calendar"></i> School Calendar.
+                      </h1>
+          
+                      <p style="color: rgb(51, 51, 51);" class="hero-text">
+                   Get instant up-to date information on the latest news <br> and events from within the campus. <strong style="color: orange;">Just turn on reminders.</strong>
+<br> </p>
+          
+                      
+       </div>
+            <br>
+          
+          </div>
+
+     
+        </div>
+      </section>
+
+      <style>
+        .containerr {
+            width: 100%; /* Set a width for the container */
+            height: 90px; /* Set a height for the container */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+    
+            
+       
+        }
+        .containerr .img {
+            width: 50px; /* Set a width for the icon */
+            height: 50px; /* Set a height for the icon */
+        }
+    
+    
+</style>
+
+
+<section class="main">
+      
+
+  
+   <br>
+   <br>
+  <h2 style="color: rgb(255, 255, 255);" class="h2 section-title text-center"> Hi There <strong style="color: rgb(0, 0, 0);" id="user-firstname" class="welcome-strong">User first  name</strong>, Explore Your Calendar for the Semester.</h2> <br>
+  <div class="search-container">
+    <ion-icon name="search-outline" aria-hidden="true"></ion-icon>
+    <input type="text" id="search-input" placeholder="Search events...">
+    <button class="search-button" id="search-btn">Search</button>
+    <!-- Optionally, you can add a close icon for suggestions -->
+    <!-- <ion-icon name="close-circle-outline" class="close-icon"></ion-icon> -->
+  </div>
+  
+
+
+
+  <section class="bodyy">
+    <div class="calendar-container">
+      <div class="calendar-header">
+        <button id="prev-month"><i class="fas fa-arrow-left"></i></button>
+       <h2> <i class="fas fa-calendar"></i> <strong id="month-year"></strong></h2>
+        <button id="next-month"><i class="fas fa-arrow-right"></i></button>
+      </div>
+      <div class="calendar">
+        <ul class="days"></ul>
+      </div>
+    </div>
+  </section>
+  
+  <!-- New section for pinned dates -->
+  <section class="pinned-dates">
+    
+    <div class="calendar-header">
+      <button id="prev-month">&lt;</button>
+      <h2> <i class="fas fa-thumbtack"></i> <strong> Pinned  Dates</strong></h2>
+      <button id="next-month">&gt;</button>
+    </div>
+    <div class="pinned-container"></div>
+  </section>
+  
+  <br><br><br>
+</section>
+
+
+
+
+<script src="calendar.js"></script>
+
+
+
+
+    
+    
+    
+    
+    
+    
+
+
+
+
+    </article>
+  </main>
+
+
+
+
+
+
+
+
+  <!-- 
+    - #BACK TO TOP
+  -->
+
+  <a href="#top" class="back-top-btn has-after active" aria-label="back to top" data-back-top-btn>
+    <ion-icon name="arrow-up" aria-hidden="true"></ion-icon>
+  </a>
+
+
+
+
+
+  <!-- 
+    - custom js link
+  -->
+  <script src="./assets/js/script.js" defer></script>
+
+  <!-- 
+    - ionicon link
+  -->
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+
+
+
+
+  <script>
+    // Get the logged-in user information from local storage
+   const existingUsers = JSON.parse(localStorage.getItem('users') || '[]');
+   const loggedInUser = existingUsers.find(user => user.isLoggedIn); // Assuming you have a way to flag logged in users
+   
+   if (loggedInUser) {
+       // Fetch the user's first name and convert it to uppercase
+       const firstName = loggedInUser.firstname.toUpperCase();
+   
+       // Update the welcome message with the user's first name in uppercase
+       document.getElementById('user-firstname').textContent = firstName;
+   } else {
+       // If no logged-in user is found, redirect to the login page
+       window.location.href = 'login.html';
+   }
+   
+   </script>
+   
+
+
+
+<script>
+    function logout() {
+        const existingUsers = JSON.parse(localStorage.getItem('users') || '[]');
+        const loggedInUser = existingUsers.find(user => user.isLoggedIn);
+    
+        if (loggedInUser) {
+            loggedInUser.isLoggedIn = false;
+            localStorage.setItem('users', JSON.stringify(existingUsers));
+        }
+    
+        window.location.href = 'login.html';
+    }
+    
+</script>
+    
+
+
+
+
+
+
+</body>
+
+</html>

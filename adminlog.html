@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>iMANI - Admin Login</title>
+
+  <!-- 
+    - favicon
+  -->
+  <link rel="shortcut icon" href="assets/images/newsletter-banner.png" type="image/svg+xml">
+
+  <!-- 
+    - custom css link
+  -->
+  <link rel="stylesheet" href="./assets/css/style.css">
+
+  <!-- 
+    - google font link
+  -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+  
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <!-- 
+    - preload images
+  -->
+  <link rel="preload" as="image" href="./assets/images/hero-banner.png">
+
+<link rel="stylesheet" href="adminlog.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+
+
+
+  <style>
+    .containerr {
+        width: 100%; /* Set a width for the container */
+        height: 100px; /* Set a height for the container */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+   
+    }
+    .containerr .img {
+        width: 50px; /* Set a width for the icon */
+        height: 50px; /* Set a height for the icon */
+    }
+
+
+
+    /* styles.css */
+
+.popup {
+  display: none;
+  position: fixed;
+  bottom: -100px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #333;
+  color: #fff;
+  padding: 15px 20px;
+  border-radius: 5px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  transition: bottom 0.5s ease-in-out;
+}
+
+.popup.show {
+  display: block;
+  bottom: 20px;
+}
+
+</style>
+
+
+</head>
+<body id="top">
+
+  <!-- 
+    - #HEADER
+  -->
+
+ 
+
+
+
+
+
+  <main>
+    <article>
+
+    
+        <section>
+            <div class="login-signup-form">
+              <div class="login-form">
+         
+  
+                <div class="containerr">
+                    <img src="./assets/images/download.jpeg" 
+                    width="80" alt="">
+                </div>
+                <h2 class="h1 hero-title">Login As  </strong> <strong style="   background: linear-gradient(45deg, cyan, blue);
+                    -webkit-background-clip: text; /* Clip the text to the background */
+                    color: transparent; 
+                    text-shadow: 0 2px 70px rgba(0, 0, 255, 0.26);" > Admin</strong> <br id="cv"></h2>
+                    <br>
+                  
+                    <br>
+                    <form id="login-form" action="#" method="POST">
+                      <div class="form-group">
+                          <label for="login-identifier"><i class="fas fa-user"></i> Email:</label>
+                          <input type="text" id="login-identifier" name="login-identifier" required>
+                      </div>
+                      <div class="form-group">
+                          <label for="login-password"><i class="fas fa-lock"></i> Password:</label>
+                          <div class="password-input-container">
+                              <input type="password" id="login-password" name="login-password" required>
+                              <span class="password-toggle-icon"><i class="fas fa-eye"></i></span>
+                          </div>
+                      </div>
+                      <button type="submit">Login</button>
+                      <br>
+                  
+                  </form>
+                <br>
+                <!-- <p style="text-align: center; font-size:14px;">New to Caleb iMANI? <a style="color: blue; font-size:14px; text-decoration:underline;" href="">Connect with support to join</a></p> -->
+              </div>
+
+
+
+            </div>
+            
+
+            </section>
+          
+
+
+
+
+    </article>
+  </main>
+
+
+  <div id="popup" class="popup">
+    <p id="popup-message"></p>
+</div>
+
+
+
+
+
+
+
+
+  <!-- 
+    - #BACK TO TOP
+  -->
+
+  <a href="#top" class="back-top-btn has-after active" aria-label="back to top" data-back-top-btn>
+    <ion-icon name="arrow-up" aria-hidden="true"></ion-icon>
+  </a>
+
+
+
+
+
+  <!-- 
+    - custom js link
+  -->
+  <script src="./assets/js/script.js" defer></script>
+
+  <!-- 
+    - ionicon link
+  -->
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      document.querySelectorAll('.password-toggle-icon').forEach(function(icon) {
+        icon.addEventListener('click', function() {
+          var passwordInput = this.previousElementSibling;
+          if (passwordInput.type === 'password') {
+            passwordInput.type = 'text';
+            this.querySelector('i').classList.remove('fa-eye');
+            this.querySelector('i').classList.add('fa-eye-slash');
+          } else {
+            passwordInput.type = 'password';
+            this.querySelector('i').classList.remove('fa-eye-slash');
+            this.querySelector('i').classList.add('fa-eye');
+          }
+        });
+      });
+    });
+    </script>
+    
+
+
+
+<script>
+    document.getElementById('login-form').addEventListener('submit', function(event) {
+        event.preventDefault(); // Prevent the form from submitting the traditional way
+    
+        // Get form data
+        const loginData = {
+            identifier: document.getElementById('login-identifier').value.trim(),
+            password: document.getElementById('login-password').value.trim(),
+        };
+    
+        // Check if the user is the specific admin user
+        if (loginData.identifier === 'junior@gmail.com' && loginData.password === 'i made this') {
+            // Show success popup and redirect to admin.html
+            showPopup('Login successful!', true, 'admin.html');
+        } else {
+            // Show error popup
+            showPopup('Incorrect email or password.');
+        }
+    });
+    
+    function showPopup(message, redirect = false, redirectUrl = '') {
+        const popup = document.getElementById('popup');
+        const popupMessage = document.getElementById('popup-message');
+        
+        popupMessage.textContent = message;
+        popup.classList.add('show');
+        
+        // Hide popup after 3 seconds and redirect if necessary
+        setTimeout(() => {
+            popup.classList.remove('show');
+            if (redirect) {
+                window.location.href = redirectUrl;
+            }
+        }, 3000);
+    }
+    
+
+
+</script>
+
+
+
+
+
+
+
+
+
+</body>
+
+</html>
